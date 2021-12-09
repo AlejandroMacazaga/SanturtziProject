@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Santurtzi">
         <activity
+            android:name=".G1_1"
+            android:exported="true" />
+        <activity
+            android:name=".FakeMapa"
+            android:exported="true" />
+        <activity
+            android:name=".mapa"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

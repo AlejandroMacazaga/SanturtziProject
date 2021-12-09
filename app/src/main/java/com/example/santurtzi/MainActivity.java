@@ -2,9 +2,11 @@ package com.example.santurtzi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,4 +28,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void irMapa(View v)
+    {
+        Intent intent = new Intent(MainActivity.this,FakeMapa.class);
+        startActivity(intent);
+    }
+
 }

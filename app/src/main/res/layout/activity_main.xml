@@ -27,6 +27,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="Empezar"
+        android:onClick="irMapa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
