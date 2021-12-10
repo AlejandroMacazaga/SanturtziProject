@@ -16,6 +16,7 @@ public class FakeMapa extends AppCompatActivity
         setContentView(R.layout.activity_fake_mapa);
     }
 
+<<<<<<< Updated upstream
     public void irG1(View v)
     {
         Intent intent=new Intent(FakeMapa.this,G1_1.class);
@@ -57,5 +58,8 @@ public class FakeMapa extends AppCompatActivity
 //        Intent intent=new Intent(FakeMapa.this,G1_1.class);
 //        startActivity(intent);
     }
+=======
+
+>>>>>>> Stashed changes
 
 }

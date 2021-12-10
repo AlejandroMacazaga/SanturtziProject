@@ -3,12 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable/G1Fondo1_background.xml" value="0.2203125" />
-        <entry key="app/src/main/res/layout/activity_fake_mapa.xml" value="0.35104166666666664" />
-        <entry key="app/src/main/res/layout/activity_g11.xml" value="0.3651041666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_mapa.xml" value="0.35104166666666664" />
-        <entry key="app/src/main/res/layout/fragment_cancion1.xml" value="0.33" />
       </map>
     </option>
   </component>
