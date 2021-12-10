@@ -21,7 +21,6 @@ public class FakeMapa extends AppCompatActivity
 
     }
 
-
     public void irG1(View v)
     {
         Intent intent=new Intent(FakeMapa.this,G1_1.class);
@@ -64,5 +63,6 @@ public class FakeMapa extends AppCompatActivity
 //        startActivity(intent);
     }
 
+>>>>>>> Stashed changes
 
 }
