@@ -10,5 +10,8 @@
     <color name="colorPrimary">#2c7da0</color>
     <color name="colorPrimaryVariant">#012A4A</color>
     <color name="color_boton">#01497c</color>
-    <color name="fondoFragments">#E0DFCC</color>
+    <color name="fondoFragments">#61ECE39B</color>
+    <color name="rojoError">#54B60404</color>
+    <color name="verdeAcert">#8A00D80B</color>
+    <color name="blancoTranspa">#7EF8EDED</color>7EF8EDED
 </resources>

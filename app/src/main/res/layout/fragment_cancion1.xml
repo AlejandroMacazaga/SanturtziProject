@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fondoFragments"
     android:orientation="vertical"
-    android:padding="5dp"
-    >
+    android:padding="5dp">
 
     <!--NV || Como no tenemos los textos de momento solo voy a dejar unos cuantos de ejemplo para desarrollar la logica(?-->
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <TextView
@@ -21,7 +19,7 @@
             android:layout_height="wrap_content"
             android:text="Desde Santurce a Bilbao"
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="17dp" />
 
     </LinearLayout>
 
@@ -34,7 +32,7 @@
             android:layout_height="wrap_content"
             android:text="Vengo por toda la "
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="17dp" />
 
         <EditText
             android:id="@+id/edtH1"
@@ -48,7 +46,7 @@
             android:layout_height="wrap_content"
             android:text=" ,"
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="17dp" />
 
     </LinearLayout>
 
@@ -61,7 +59,7 @@
             android:layout_height="wrap_content"
             android:text="Con mi "
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="17dp" />
 
         <EditText
             android:id="@+id/edtH2"
@@ -75,7 +73,7 @@
             android:layout_height="wrap_content"
             android:text=" remangada"
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="17dp" />
 
     </LinearLayout>
 
@@ -88,7 +86,7 @@
             android:layout_height="wrap_content"
             android:text="Luciendo la "
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="17dp" />
 
         <EditText
             android:id="@+id/edtH3"
@@ -102,7 +100,7 @@
             android:layout_height="wrap_content"
             android:text=" ,"
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="17dp" />
 
     </LinearLayout>
 
@@ -122,7 +120,7 @@
             android:layout_height="wrap_content"
             android:text=" deprisa y "
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="17dp" />
 
         <EditText
             android:id="@+id/edtH5"
@@ -142,7 +140,7 @@
             android:layout_height="wrap_content"
             android:text="Porque me oprime el "
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="17dp" />
 
         <EditText
             android:id="@+id/edtH6"
@@ -156,7 +154,7 @@
             android:layout_height="wrap_content"
             android:text=" ,"
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="17dp" />
 
     </LinearLayout>
 
@@ -169,7 +167,7 @@
             android:layout_height="wrap_content"
             android:text="Voy "
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="17dp" />
 
         <EditText
             android:id="@+id/edtH7"
@@ -183,7 +181,7 @@
             android:layout_height="wrap_content"
             android:text=" por las calles"
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="17dp" />
 
     </LinearLayout>
 
@@ -196,7 +194,7 @@
             android:layout_height="wrap_content"
             android:text="¡ "
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="17dp" />
 
         <EditText
             android:id="@+id/edtH8"
@@ -205,19 +203,12 @@
             android:textColor="@color/black"
             android:textSize="15dp" />
 
-        <EditText
-            android:id="@+id/edtH9"
-            android:layout_width="75dp"
-            android:layout_height="40dp"
-            android:textColor="@color/black"
-            android:textSize="15dp" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" !"
+            android:text=" compra!"
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="17dp" />
 
     </LinearLayout>
 
