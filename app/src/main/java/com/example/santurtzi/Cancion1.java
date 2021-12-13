@@ -1,5 +1,6 @@
 package com.example.santurtzi;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -15,6 +16,7 @@ import android.widget.LinearLayout;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Locale;
 
 public class Cancion1 extends Fragment
 {
@@ -22,6 +24,8 @@ public class Cancion1 extends Fragment
     private View v;
 
     private Button btnComprobar;
+
+    private int bien;
 
     private HashMap<EditText,String> edits;
     private EditText edtH1;
@@ -32,7 +36,6 @@ public class Cancion1 extends Fragment
     private EditText edtH6;
     private EditText edtH7;
     private EditText edtH8;
-    private EditText edtH9;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -74,9 +77,6 @@ public class Cancion1 extends Fragment
         edtH8=v.findViewById(R.id.edtH8);
         edits.put(edtH8,"edtH8");
 
-        edtH9=v.findViewById(R.id.edtH9);
-        edits.put(edtH9,"edtH9");
-
         gestionarEventos();
     }
 
@@ -94,16 +94,52 @@ public class Cancion1 extends Fragment
 
     public void comprobarRespuestas()
     {
-        Log.i("pruebas","Comprobando Respuestas");
         GestorCancion gc= new GestorCancion(getView().getContext());
 
-        Iterator it=edits.keySet().iterator();
+        bien=0;
+
+        Iterator<EditText> it=edits.keySet().iterator();
         while(it.hasNext())
         {
-            String key=edits.get(it.next());
-            String respuesta=gc.respuesta(key);
-            Log.i("Haciendo pruebas",respuesta);
+            EditText edt=it.next();
+            String key=edits.get(edt);
+            String respBien=gc.respuesta(key);
+
+            String respAlum=edt.getText().toString().toLowerCase();
+            if(respAlum!=null)
+            {
+                if(!respAlum.equals(respBien.toLowerCase()))
+                {
+                    edt.setBackgroundColor(v.getResources().getColor(R.color.rojoError));
+                }
+                else
+                {
+                    edt.setBackgroundColor(v.getResources().getColor(R.color.verdeAcert));
+                    edt.setEnabled(false);
+                    edt.setText(respBien);
+                    bien+=1;
+                }
+            }
+
         }
+        Log.i("pruebilla", String.valueOf(bien));
+        gestionarFallos();
+    }
+
+    public void gestionarFallos()
+    {
+        switch (bien)
+        {
+            case 0:
+
+                break;
+            case 8:
+                ((G1_1)getActivity()).cambiarFragment();//Llama al metodo de la actividad la cual va a cambiar todoo
+                break;
+            default:
+                break;
+        }
+        //reproducir audio
     }
 
 }
