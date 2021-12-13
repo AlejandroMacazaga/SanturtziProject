@@ -63,6 +63,5 @@ public class FakeMapa extends AppCompatActivity
 //        startActivity(intent);
     }
 
->>>>>>> Stashed changes
 
 }
