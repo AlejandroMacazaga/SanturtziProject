@@ -29,8 +29,8 @@ public class FakeMapa extends AppCompatActivity
 
     public void irG2(View v)
     {
-//        Intent intent=new Intent(FakeMapa.this,G1_1.class);
-//        startActivity(intent);
+        Intent intent=new Intent(FakeMapa.this,G2_1.class);
+        startActivity(intent);
     }
 
     public void irG3(View v)

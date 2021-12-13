@@ -18,7 +18,7 @@
         android:id="@+id/btnEmpezar"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="Empezar"
+        android:text="@string/hasi"
         android:onClick="irMapa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

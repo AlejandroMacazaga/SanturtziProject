@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fondoFragments"
+    android:background="#80E0DFCC"
     android:orientation="vertical"
-    android:padding="5dp"
-    >
+    android:padding="5dp">
 
     <!--NV || Como no tenemos los textos de momento solo voy a dejar unos cuantos de ejemplo para desarrollar la logica(?-->
 

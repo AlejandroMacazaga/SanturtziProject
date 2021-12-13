@@ -1,7 +1,11 @@
 package com.example.santurtzi;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.app.Application;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -9,7 +13,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.VideoView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
+
+    private VideoView videoview;
+    private Uri uri;
+    private int stopPosition;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,16 +26,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        VideoView videoview = (VideoView) findViewById(R.id.videoFondo);
-        Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.fondo);
+        videoview = (VideoView) findViewById(R.id.videoFondo);
+        uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.fondo);
         videoview.setVideoURI(uri);
         videoview.start();
-        videoview.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {//no se como pero esto hace q el video sea un bucle
-            @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
-            }
-        });
+
+
+
     }
 
     public void irMapa(View v)
@@ -34,5 +40,18 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this,FakeMapa.class);
         startActivity(intent);
     }
+    @Override
+    public void onPause() {
+        super.onPause();
+        stopPosition = videoview.getCurrentPosition(); //stopPosition is an int
+        videoview.pause();
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        videoview.seekTo(stopPosition);
+        videoview.start(); //Or use resume() if it doesn't work. I'm not sure
+    }
+
 
 }

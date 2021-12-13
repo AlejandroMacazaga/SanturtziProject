@@ -2,5 +2,6 @@
     <string name="app_name">Santurtzi</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hasi">HASI</string>
     <string name="comprobar">Comprobar</string>
 </resources>
