@@ -1,4 +1,4 @@
-package com.example.santurtzi.dataobjects;
+package com.example.santurtzi;
 
 public class Pregunta
 {
