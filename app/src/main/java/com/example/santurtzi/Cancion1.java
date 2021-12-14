@@ -108,16 +108,19 @@ public class Cancion1 extends Fragment
             String respAlum=edt.getText().toString().toLowerCase();
             if(respAlum!=null)
             {
-                if(!respAlum.equals(respBien.toLowerCase()))
+                if(respAlum.length()>0)
                 {
-                    edt.setBackgroundColor(v.getResources().getColor(R.color.rojoError));
-                }
-                else
-                {
-                    edt.setBackgroundColor(v.getResources().getColor(R.color.verdeAcert));
-                    edt.setEnabled(false);
-                    edt.setText(respBien);
-                    bien+=1;
+                    if(!respAlum.equals(respBien.toLowerCase()))
+                    {
+                        edt.setBackgroundColor(v.getResources().getColor(R.color.rojoError));
+                    }
+                    else
+                    {
+                        edt.setBackgroundColor(v.getResources().getColor(R.color.verdeAcert));
+                        edt.setEnabled(false);
+                        edt.setText(respBien);
+                        bien+=1;
+                    }
                 }
             }
 
