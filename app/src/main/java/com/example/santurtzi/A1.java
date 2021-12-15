@@ -11,7 +11,7 @@ import java.io.IOException;
 import pl.droidsonroids.gif.GifDrawable;
 import pl.droidsonroids.gif.GifImageView;
 
-public class G1_1 extends AppCompatActivity
+public class A1 extends AppCompatActivity
 {
 
     private int nivel;
@@ -69,17 +69,32 @@ public class G1_1 extends AppCompatActivity
 
     }
 
-    public void cambiarFragment()
+    //0 algun fallo
+    //1 todas bien
+    //-1 todas mal
+    public void cambiarFragment(int aciertos)
     {
-        Log.i("pruebax","Funciona");
-        try
+        switch (aciertos)
         {
-            GifDrawable gif=new GifDrawable(getResources(),R.drawable.gif_algunfallo);
-            gifRespuestas.setImageDrawable(gif);
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
+            case -1:
+                gifRespuestas.setImageDrawable(gifMal);
+                break;
+            case 0:
+                gifRespuestas.setImageDrawable(gifAlgun);
+                break;
+            case 1:
+                gifRespuestas.setImageDrawable(gifsAciertos[nivel]);
+                nivel++;
+                if(nivel<3)
+                {
+                    clPrincipal.setBackgroundResource(fondos[nivel]);
+                    //cambiar de fragment
+                }
+                else
+                {
+                    //fin de la actividad ºº
+                }
+                break;
         }
     }
 

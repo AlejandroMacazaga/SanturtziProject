@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="desde_santurce_a_bilbao">Desde Santurce a Bilbao</string>
+    <string name="vengo_por_toda_la">Vengo por toda la </string>
+    <string name="coma">,</string>
+    <string name="con_mi">Con mi </string>
+    <string name="remangada"> remangada</string>
+    <string name="luciendo_la">Luciendo la </string>
+    <string name="deprisa_y"> deprisa y</string>
+    <string name="porque_me_oprime_el">Porque me oprime el </string>
+    <string name="voy">Voy </string>
+    <string name="por_las_calles"> por las calles</string>
+    <string name="exclamacion1">¡</string>
+    <string name="compra"> compra!</string>
+</resources>

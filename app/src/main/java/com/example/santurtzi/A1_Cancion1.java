@@ -1,6 +1,7 @@
 package com.example.santurtzi;
 
-import android.graphics.Color;
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -10,15 +11,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Locale;
 
-public class Cancion1 extends Fragment
+public class A1_Cancion1 extends Fragment
 {
 
     private View v;
@@ -94,7 +94,7 @@ public class Cancion1 extends Fragment
 
     public void comprobarRespuestas()
     {
-        GestorCancion gc= new GestorCancion(getView().getContext());
+        A1_GestorCancion gc= new A1_GestorCancion(getView().getContext());
 
         bien=0;
 
@@ -106,20 +106,17 @@ public class Cancion1 extends Fragment
             String respBien=gc.respuesta(key);
 
             String respAlum=edt.getText().toString().toLowerCase();
-            if(respAlum!=null)
-            {
-                if(respAlum.length()>0)
-                {
-                    if(!respAlum.equals(respBien.toLowerCase()))
-                    {
-                        edt.setBackgroundColor(v.getResources().getColor(R.color.rojoError));
-                    }
-                    else
-                    {
-                        edt.setBackgroundColor(v.getResources().getColor(R.color.verdeAcert));
+            if(respAlum!=null) {
+                if (respAlum.length() > 0) {
+                    if (!respAlum.equals(respBien.toLowerCase())) {
+                        edt.setBackground(v.getResources().getDrawable(R.drawable.rounded_edittext_mal));
+                        //edt.setBackgroundColor(v.getResources().getColor(R.color.rojoError));
+                    } else {
+                        edt.setBackground(v.getResources().getDrawable(R.drawable.rounded_edittext_bien));
+                        //edt.setBackgroundColor(v.getResources().getColor(R.color.verdeAcert));
                         edt.setEnabled(false);
                         edt.setText(respBien);
-                        bien+=1;
+                        bien += 1;
                     }
                 }
             }
@@ -134,15 +131,25 @@ public class Cancion1 extends Fragment
         switch (bien)
         {
             case 0:
-
+                ((A1)getActivity()).cambiarFragment(-1);
+                hideKeyboardFrom(v.getContext(),v);
                 break;
             case 8:
-                ((G1_1)getActivity()).cambiarFragment();//Llama al metodo de la actividad la cual va a cambiar todoo
+                ((A1)getActivity()).cambiarFragment(1);//Llama al metodo de la actividad la cual va a cambiar el fondo y el gif
+                hideKeyboardFrom(v.getContext(),v);
                 break;
             default:
+                hideKeyboardFrom(v.getContext(),v);
+                ((A1)getActivity()).cambiarFragment(0);
                 break;
         }
         //reproducir audio
+    }
+
+    public static void hideKeyboardFrom(Context context, View view)
+    {
+        InputMethodManager imm = (InputMethodManager) context.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
 }

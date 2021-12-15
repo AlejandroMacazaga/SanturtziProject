@@ -13,5 +13,6 @@
     <color name="fondoFragments">#61ECE39B</color>
     <color name="rojoError">#54B60404</color>
     <color name="verdeAcert">#8A00D80B</color>
-    <color name="blancoTranspa">#7EF8EDED</color>7EF8EDED
+    <color name="blancoTranspa">#7EF8EDED</color>
+    <color name="negroTranspa">#6A000000</color>
 </resources>
