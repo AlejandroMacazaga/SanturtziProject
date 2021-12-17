@@ -31,12 +31,19 @@ public class MainActivity extends AppCompatActivity{
         videoview.setVideoURI(uri);
         videoview.start();
 
+        videoview.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
+
 
 
     }
 
-    public void irMapa(View v)
-    {
+    public void irMapa(View v){
+
         Intent intent = new Intent(MainActivity.this,FakeMapa.class);
         startActivity(intent);
     }
@@ -52,6 +59,7 @@ public class MainActivity extends AppCompatActivity{
         videoview.seekTo(stopPosition);
         videoview.start(); //Or use resume() if it doesn't work. I'm not sure
     }
+
 
 
 }
