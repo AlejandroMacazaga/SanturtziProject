@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#80E0DFCC"
     android:orientation="vertical"
-    android:padding="5dp">
+    android:padding="10dp">
 
     <!--NV || Como no tenemos los textos de momento solo voy a dejar unos cuantos de ejemplo para desarrollar la logica(?-->
 
@@ -17,20 +17,20 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Desde Santurce a Bilbao"
+            android:text="@string/desde_santurce_a_bilbao"
             android:textColor="@color/black"
             android:textSize="17dp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Vengo por toda la "
+            android:text="@string/vengo_por_toda_la"
             android:textColor="@color/black"
             android:textSize="17dp" />
 
@@ -39,25 +39,26 @@
             android:layout_width="75dp"
             android:layout_height="40dp"
             android:textColor="@color/black"
+            android:textAlignment="center"
             android:textSize="15dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" ,"
+            android:text="@string/coma"
             android:textColor="@color/black"
             android:textSize="17dp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Con mi "
+            android:text="@string/con_mi"
             android:textColor="@color/black"
             android:textSize="17dp" />
 
@@ -65,26 +66,29 @@
             android:id="@+id/edtH2"
             android:layout_width="75dp"
             android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:textColor="@color/black"
+            android:textAlignment="center"
             android:textSize="15dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" remangada"
+            android:text="@string/remangada"
             android:textColor="@color/black"
             android:textSize="17dp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Luciendo la "
+            android:text="@string/luciendo_la"
             android:textColor="@color/black"
             android:textSize="17dp" />
 
@@ -92,33 +96,39 @@
             android:id="@+id/edtH3"
             android:layout_width="75dp"
             android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:textColor="@color/black"
+            android:textAlignment="center"
             android:textSize="15dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" ,"
+            android:text="@string/coma"
             android:textColor="@color/black"
             android:textSize="17dp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <EditText
             android:id="@+id/edtH4"
             android:layout_width="75dp"
             android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:textColor="@color/black"
+            android:textAlignment="center"
             android:textSize="15dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" deprisa y "
+            android:text="@string/deprisa_y"
             android:textColor="@color/black"
             android:textSize="17dp" />
 
@@ -126,19 +136,22 @@
             android:id="@+id/edtH5"
             android:layout_width="75dp"
             android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:textColor="@color/black"
+            android:textAlignment="center"
             android:textSize="15dp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Porque me oprime el "
+            android:text="@string/porque_me_oprime_el"
             android:textColor="@color/black"
             android:textSize="17dp" />
 
@@ -146,26 +159,29 @@
             android:id="@+id/edtH6"
             android:layout_width="75dp"
             android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:textColor="@color/black"
+            android:textAlignment="center"
             android:textSize="15dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" ,"
+            android:text="@string/coma"
             android:textColor="@color/black"
             android:textSize="17dp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Voy "
+            android:text="@string/voy"
             android:textColor="@color/black"
             android:textSize="17dp" />
 
@@ -173,26 +189,29 @@
             android:id="@+id/edtH7"
             android:layout_width="75dp"
             android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:textColor="@color/black"
+            android:textAlignment="center"
             android:textSize="15dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" por las calles"
+            android:text="@string/por_las_calles"
             android:textColor="@color/black"
             android:textSize="17dp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="¡ "
+            android:text="@string/exclamacion1"
             android:textColor="@color/black"
             android:textSize="17dp" />
 
@@ -200,13 +219,16 @@
             android:id="@+id/edtH8"
             android:layout_width="75dp"
             android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:textColor="@color/black"
+            android:textAlignment="center"
             android:textSize="15dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" compra!"
+            android:text="@string/compra"
             android:textColor="@color/black"
             android:textSize="17dp" />
 

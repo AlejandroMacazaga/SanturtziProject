@@ -1,6 +1,5 @@
 package com.example.santurtzi;
 
-import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -23,7 +22,7 @@ public class FakeMapa extends AppCompatActivity
 
     public void irG1(View v)
     {
-        Intent intent=new Intent(FakeMapa.this,G1_1.class);
+        Intent intent=new Intent(FakeMapa.this, A1.class);
         startActivity(intent);
     }
 

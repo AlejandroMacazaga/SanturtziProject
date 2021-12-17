@@ -9,13 +9,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class GestorCancion extends Properties
+public class A1_GestorCancion extends Properties
 {
 
     private Context context;
     private Properties properties;
 
-    public GestorCancion(Context context)
+    public A1_GestorCancion(Context context)
     {
         this.context = context;
         //creates a new object ‘Properties’
