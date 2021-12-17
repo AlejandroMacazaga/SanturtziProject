@@ -2,6 +2,9 @@ package com.example.santurtzi;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentContainerView;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -26,6 +29,9 @@ public class A1 extends AppCompatActivity
 
     private int[] fondos;
 
+    private FragmentContainerView frgCancion;
+    private int[] fragments;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -40,7 +46,7 @@ public class A1 extends AppCompatActivity
 
         gifRespuestas=findViewById(R.id.gifRespuestas);
 
-
+        frgCancion = findViewById(R.id.frgCancion);
     }
 
     private void cargarRecursos()
@@ -67,6 +73,7 @@ public class A1 extends AppCompatActivity
 
         fondos= new int[]{R.mipmap.g1fondo1_foreground,R.mipmap.g1fondo2_foreground,R.mipmap.g1fondo3_foreground};
 
+        fragments= new int[]{R.layout.fragment_cancion1,R.layout.fragment_cancion2};////////////////////////////////////////////////////////////////////////////
     }
 
     //0 algun fallo
