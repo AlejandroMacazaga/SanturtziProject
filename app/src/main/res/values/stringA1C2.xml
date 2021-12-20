@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="sardinas">Sardinas</string>
+    <string name="mis">Mis</string>
+    <string name="que_ricas_son">Que ricas son</string>
+    <string name="son_de">Son de</string>
+    <string name="las_traigo_yo">Las traigo yo</string>
+    <string name="x2">(x2)</string>
+</resources>

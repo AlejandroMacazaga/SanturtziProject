@@ -2,12 +2,15 @@ package com.example.santurtzi;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentContainerView;
-import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import java.io.IOException;
 
@@ -30,13 +33,17 @@ public class A1 extends AppCompatActivity
     private int[] fondos;
 
     private FragmentContainerView frgCancion;
-    private int[] fragments;
+    
+    private TextView txtAviso;
+    private Button btnSalir;
+
+    private String[] palabras1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_g11);
+        setContentView(R.layout.activity_a1);
 
         nivel=0;
         cargarRecursos();
@@ -47,6 +54,8 @@ public class A1 extends AppCompatActivity
         gifRespuestas=findViewById(R.id.gifRespuestas);
 
         frgCancion = findViewById(R.id.frgCancion);
+        txtAviso =findViewById(R.id.txtAviso);
+        btnSalir=findViewById(R.id.btnSalir);
     }
 
     private void cargarRecursos()
@@ -71,9 +80,9 @@ public class A1 extends AppCompatActivity
             Log.e("Error","Error con los gifs");
         }
 
-        fondos= new int[]{R.mipmap.g1fondo1_foreground,R.mipmap.g1fondo2_foreground,R.mipmap.g1fondo3_foreground};
+        fondos= new int[]{R.mipmap.a1fondo1_foreground,R.mipmap.a1fondo2_foreground,R.mipmap.a1fondo3_foreground};
 
-        fragments= new int[]{R.layout.fragment_cancion1,R.layout.fragment_cancion2};////////////////////////////////////////////////////////////////////////////
+        palabras1= new String[]{"orilla","salla","pantorrilla","vengo","corriendo","corsé","gritando","quien"};
     }
 
     //0 algun fallo
@@ -81,13 +90,18 @@ public class A1 extends AppCompatActivity
     //-1 todas mal
     public void cambiarFragment(int aciertos)
     {
+        MediaPlayer music;
         switch (aciertos)
         {
             case -1:
                 gifRespuestas.setImageDrawable(gifMal);
+                music=MediaPlayer.create(A1.this,R.raw.a1_ningun_acierto);
+                music.start();
                 break;
             case 0:
                 gifRespuestas.setImageDrawable(gifAlgun);
+                music=MediaPlayer.create(A1.this,R.raw.a1_algun_fallo);
+                music.start();
                 break;
             case 1:
                 gifRespuestas.setImageDrawable(gifsAciertos[nivel]);
@@ -95,13 +109,37 @@ public class A1 extends AppCompatActivity
                 if(nivel<3)
                 {
                     clPrincipal.setBackgroundResource(fondos[nivel]);
+                    music=MediaPlayer.create(A1.this,R.raw.a1_correcto1);
+                    music.start();
                     //cambiar de fragment
                 }
                 else
                 {
+                    music=MediaPlayer.create(A1.this,R.raw.a1_correcto2);
+                    music.start();
+                    frgCancion.setVisibility(View.INVISIBLE);
+                    txtAviso.setVisibility(View.INVISIBLE);
+                    //Y si lo animo en plan que se haga mas grande progresivamente
+                    gifRespuestas.getLayoutParams().width=1100;
+                    gifRespuestas.getLayoutParams().height=1000;
+                    btnSalir.setVisibility(View.VISIBLE);
                     //fin de la actividad ºº
                 }
                 break;
+        }
+    }
+
+    public void salir(View v)
+    {
+        Intent intent = new Intent(A1.this, Mapa.class);
+        startActivity(intent);
+    }
+
+    private void generarAyuda()
+    {
+        switch (nivel)
+        {
+
         }
     }
 

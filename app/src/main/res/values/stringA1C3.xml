@@ -1,2 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="la_del">La del </string>
+    <string name="me"> me </string>
+    <string name="llama"> llama,</string>
+    <string name="tambi_n"> también,</string>
+    <string name="la_del_tercero_me_dice">La del tercero me dice </string>
+    <string name="a">¿A </string>
+    <string name="las_trae"> las trae </string>
+    <string name="interrogacion">\?</string>
+    <string name="y_yo_le_digo_que_a">Y yo le digo que, a </string>
+    <string name="coma"> ,</string>
+    <string name="ella_me_dice_que_a">Ella me dice que, a </string>
+    <string name="cojo_la">Cojo la </string>
+    <string name="y_me_marcho"> y me marcho.</string>
+</resources>

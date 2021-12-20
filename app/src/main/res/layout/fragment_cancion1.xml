@@ -8,7 +8,7 @@
 
     <!--NV || Como no tenemos los textos de momento solo voy a dejar unos cuantos de ejemplo para desarrollar la logica(?-->
     <LinearLayout
-        android:visibility="visible"
+        android:visibility="gone"
         android:id="@+id/layCancion1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -253,7 +253,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sardinas "
+                android:text="@string/sardinas"
                 android:textColor="@color/black"
                 android:textSize="17dp" />
 
@@ -274,7 +274,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mis "
+                android:text="@string/mis"
                 android:textColor="@color/black"
                 android:textSize="17dp" />
 
@@ -295,7 +295,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Que ricas son"
+                android:text="@string/que_ricas_son"
                 android:textColor="@color/black"
                 android:textSize="17dp" />
 
@@ -308,7 +308,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Son de "
+                android:text="@string/son_de"
                 android:textColor="@color/black"
                 android:textSize="17dp" />
 
@@ -331,7 +331,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Las traigo yo"
+                android:text="@string/las_traigo_yo"
                 android:textColor="@color/black"
                 android:textSize="17dp" />
 
@@ -344,7 +344,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="(x2)"
+                android:text="@string/x2"
                 android:textColor="@color/black"
                 android:textSize="17dp" />
 
@@ -354,7 +354,7 @@
 
     <LinearLayout
         android:id="@+id/layCancion3"
-        android:visibility="gone"
+        android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -366,9 +366,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="La del "
+                android:text="@string/la_del"
                 android:textColor="@color/black"
-                android:textSize="17dp" />
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/edtH12"
@@ -378,14 +378,14 @@
                 android:layout_marginRight="5dp"
                 android:textColor="@color/black"
                 android:textAlignment="center"
-                android:textSize="15dp"/>
+                android:textSize="17dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" me "
+                android:text="@string/me"
                 android:textColor="@color/black"
-                android:textSize="17dp" />
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/edtH13"
@@ -395,14 +395,14 @@
                 android:layout_marginRight="5dp"
                 android:textColor="@color/black"
                 android:textAlignment="center"
-                android:textSize="15dp"/>
+                android:textSize="17dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" llama,"
+                android:text="@string/coma"
                 android:textColor="@color/black"
-                android:textSize="17dp" />
+                android:textSize="18dp" />
 
         </LinearLayout>
 
@@ -413,9 +413,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="La del "
+                android:text="@string/la_del"
                 android:textColor="@color/black"
-                android:textSize="17dp" />
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/edtH14"
@@ -425,14 +425,27 @@
                 android:layout_marginRight="5dp"
                 android:textColor="@color/black"
                 android:textAlignment="center"
-                android:textSize="15dp"/>
+                android:textSize="17dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" también,"
+                android:text="@string/tambi_n"
                 android:textColor="@color/black"
                 android:textSize="17dp" />
+
+        </LinearLayout>/
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/la_del_tercero_me_dice"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
 
         </LinearLayout>
 
@@ -443,30 +456,26 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="La del tercero me dice "
+                android:text="@string/a"
                 android:textColor="@color/black"
-                android:textSize="17dp" />
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/edtH15"
                 android:layout_width="80dp"
                 android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:textColor="@color/black"
                 android:textAlignment="center"
-                android:textSize="15dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+                android:textSize="17dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="¿A "
+                android:text="@string/las_trae"
                 android:textColor="@color/black"
-                android:textSize="17dp" />
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/edtH16"
@@ -476,14 +485,27 @@
                 android:layout_marginRight="5dp"
                 android:textColor="@color/black"
                 android:textAlignment="center"
-                android:textSize="15dp"/>
+                android:textSize="17dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" las trae "
+                android:text="@string/interrogacion"
                 android:textColor="@color/black"
-                android:textSize="17dp" />
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/y_yo_le_digo_que_a"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/edtH17"
@@ -493,14 +515,14 @@
                 android:layout_marginRight="5dp"
                 android:textColor="@color/black"
                 android:textAlignment="center"
-                android:textSize="15dp"/>
+                android:textSize="17dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" ?"
+                android:text="@string/coma"
                 android:textColor="@color/black"
-                android:textSize="17dp" />
+                android:textSize="18dp" />
 
         </LinearLayout>
 
@@ -511,9 +533,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Y yo le digo que, a"
+                android:text="@string/ella_me_dice_que_a"
                 android:textColor="@color/black"
-                android:textSize="17dp" />
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/edtH18"
@@ -523,14 +545,14 @@
                 android:layout_marginRight="5dp"
                 android:textColor="@color/black"
                 android:textAlignment="center"
-                android:textSize="15dp"/>
+                android:textSize="17dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" ,"
+                android:text="@string/coma"
                 android:textColor="@color/black"
-                android:textSize="17dp" />
+                android:textSize="18dp" />
 
         </LinearLayout>
 
@@ -541,9 +563,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ella me dice que, a "
+                android:text="@string/cojo_la"
                 android:textColor="@color/black"
-                android:textSize="17dp" />
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/edtH19"
@@ -553,61 +575,14 @@
                 android:layout_marginRight="5dp"
                 android:textColor="@color/black"
                 android:textAlignment="center"
-                android:textSize="15dp"/>
+                android:textSize="17dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" ,"
+                android:text="@string/y_me_marcho"
                 android:textColor="@color/black"
-                android:textSize="17dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cojo la "
-                android:textColor="@color/black"
-                android:textSize="17dp" />
-
-            <EditText
-                android:id="@+id/edtH20"
-                android:layout_width="80dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:textColor="@color/black"
-                android:textAlignment="center"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" y me "
-                android:textColor="@color/black"
-                android:textSize="17dp" />
-
-            <EditText
-                android:id="@+id/edtH21"
-                android:layout_width="80dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:textColor="@color/black"
-                android:textAlignment="center"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" marcho,"
-                android:textColor="@color/black"
-                android:textSize="17dp" />
+                android:textSize="18dp" />
 
         </LinearLayout>
 
@@ -620,24 +595,24 @@
                 android:layout_height="wrap_content"
                 android:text="@string/exclamacion1"
                 android:textColor="@color/black"
-                android:textSize="17dp" />
+                android:textSize="18dp" />
 
             <EditText
-                android:id="@+id/edtH22"
+                android:id="@+id/edtH20"
                 android:layout_width="80dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:textColor="@color/black"
                 android:textAlignment="center"
-                android:textSize="15dp"/>
+                android:textSize="17dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/compra"
                 android:textColor="@color/black"
-                android:textSize="17dp" />
+                android:textSize="18dp" />
 
         </LinearLayout>
 
@@ -647,7 +622,7 @@
         android:id="@+id/btnComprobar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="17dp"
         android:text="@string/comprobar" />
 
 </LinearLayout>
