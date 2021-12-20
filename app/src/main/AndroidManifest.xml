@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Santurtzi">
         <activity
+            android:name=".A5_Sotera"
             android:name=".G2_1"
             android:exported="true" />
         <activity
@@ -17,6 +18,9 @@
             android:exported="true" />
         <activity
             android:name=".FakeMapa"
+            android:exported="true" />
+        <activity
+            android:name=".G2_1"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

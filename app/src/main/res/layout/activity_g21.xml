@@ -7,9 +7,9 @@
     tools:context=".G2_1">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="182dp"
-        android:layout_height="356dp"
+        android:id="@+id/imgPescador"
+        android:layout_width="204dp"
+        android:layout_height="225dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -26,4 +26,89 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgBocadillo"
+        android:layout_width="389dp"
+        android:layout_height="289dp"
+        android:scaleX="-1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024"
+        app:srcCompat="@drawable/bocadillosinfondo" />
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="227dp"
+        android:layout_height="116dp"
+        android:text="@string/act2_1"
+        app:layout_constraintBottom_toBottomOf="@+id/imgBocadillo"
+        app:layout_constraintEnd_toEndOf="@+id/imgBocadillo"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="@+id/imgBocadillo"
+        app:layout_constraintTop_toTopOf="@+id/imgBocadillo"
+        app:layout_constraintVertical_bias="0.387" />
+
+    <ImageView
+        android:id="@+id/imgSardina1"
+        android:layout_width="125dp"
+        android:layout_height="69dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/sardina"
+        tools:layout_editor_absoluteY="563dp" />
+
+    <ImageView
+        android:id="@+id/imgSardina2"
+        android:layout_width="125dp"
+        android:layout_height="69dp"
+        app:layout_constraintStart_toEndOf="@+id/imgSardina1"
+        app:srcCompat="@drawable/sardina"
+        tools:layout_editor_absoluteY="563dp" />
+
+    <ImageView
+        android:id="@+id/imgSardina3"
+        android:layout_width="125dp"
+        android:layout_height="69dp"
+        app:layout_constraintStart_toEndOf="@+id/imgSardina2"
+        app:srcCompat="@drawable/sardina"
+        tools:layout_editor_absoluteY="563dp" />
+
+    <TextView
+        android:id="@+id/txtSardina1"
+        android:layout_width="113dp"
+        android:layout_height="62dp"
+        android:gravity="center"
+        android:text="@string/act2_3_1"
+        android:textColor="#FF0000"
+        app:layout_constraintBottom_toBottomOf="@+id/imgSardina1"
+        app:layout_constraintEnd_toEndOf="@+id/imgSardina1"
+        app:layout_constraintStart_toStartOf="@+id/imgSardina1"
+        app:layout_constraintTop_toTopOf="@+id/imgSardina1" />
+
+    <TextView
+        android:id="@+id/txtSardina2"
+        android:layout_width="113dp"
+        android:layout_height="63dp"
+        android:gravity="center"
+        android:text="@string/act2_3_2"
+        android:textColor="#FF0000"
+        app:layout_constraintBottom_toBottomOf="@+id/imgSardina2"
+        app:layout_constraintEnd_toEndOf="@+id/imgSardina2"
+        app:layout_constraintStart_toStartOf="@+id/imgSardina2"
+        app:layout_constraintTop_toTopOf="@+id/imgSardina2" />
+
+    <TextView
+        android:id="@+id/txtSardina3"
+        android:layout_width="111dp"
+        android:layout_height="61dp"
+        android:gravity="center"
+        android:text="@string/act2_3_3"
+        android:textColor="#FF0000"
+        app:layout_constraintBottom_toBottomOf="@+id/imgSardina3"
+        app:layout_constraintEnd_toEndOf="@+id/imgSardina3"
+        app:layout_constraintStart_toStartOf="@+id/imgSardina3"
+        app:layout_constraintTop_toTopOf="@+id/imgSardina3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

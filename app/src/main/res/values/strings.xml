@@ -7,4 +7,31 @@
     <string name="act1Aviso">*No se tendran en cuenta las mayúsculas, minúsculas o tildes*</string>
     <string name="A5_texto">¿Cómo va la aventura? ¿A que os suena el logo que veis en la pantalla? Bueno, para quien no lo sepa es el logo de Sotera y dentro de unos segundos podreis saber mas sobre ello. para informarnos haremos un concurso con vuestros compañeros en el que remareis en vuestras traineras virtuales a la meta. ¡Para remar con más rapidez tenéis que contestar a las siguientes preguntas rápido y bien. Buena suerte!</string>
 
+
+
+    <string name="act2_1">¡Buenos días queridos pescadores! Hoy saldremos desde el puerto de Santurtzi a pescar sardinas. Sabéis lo que son?</string>
+    <string name="act2_2">Si la respuesta es que si hoy aprendereis mucho más de lo que sabíais. Pero, si es que no, no os preocupéis, esta aventura seguro que aprendereis mucho más.</string>
+    <string name="act2_3">Nos hemos encontrado unas cuantas sardinas. Pero debemos señalar cual es la más sabrosa porque es la que tiene la respuesta correcta de la pregunta que os haré. ¿En la historia de Santurtzi, cuál era la forma de vida que se tenía?</string>
+    <string name="act2_3_1">Agricultura</string>
+    <string name="act2_3_2">Industria</string>
+    <string name="act2_3_3">La pesca</string>
+    <string name="act2_4">¡Correcto! Hemos pescado una sardina muy grande y sabrosa. Pero necesitamos más. Mirar! Allí hay más. ¿Cuál es el símbolo más importante de Santurtzi en sus fiestas? </string>
+    <string name="act2_4_1">Las sardinas</string>
+    <string name="act2_4_2">La virgen</string>
+    <string name="act2_4_3">El serantes</string>
+    <string name="act2_5">¡Estamos ya muy dentro del mar! Es hora de volver. Pero debemos seguir pescando un poco más. ¿Las sardinas que son?</string>
+    <string name="act2_5_1">Anfibios</string>
+    <string name="act2_5_2">Peces</string>
+    <string name="act2_5_3">Mamiferos</string>
+    <string name="act2_6">¡Estamos pescando muy bien! Y ya nos queda poco! ¿Quienes eran los que iban a pescar y quienes lo vendían en el puerto?</string>
+    <string name="act2_6_1">Hombres</string>
+    <string name="act2_6_2">Mujeres</string>
+    <string name="act2_6_3">Ambos</string>
+    <string name="act2_7">Ya casi hemos llegado. Nos queda pescar una sardina para luego disfrutar de una buena parrillada. ¿Dónde paraban todos los barcos una vez llegada de la pesca?</string>
+    <string name="act2_7_1">Aparcamiento</string>
+    <string name="act2_7_2">Mercado</string>
+    <string name="act2_7_3">Puerto</string>
+    <string name="act2_8">Pues hemos acabado la pesca. Espero que hayáis disfrutado de esta aventura. Ahora ya sabéis mucho más sobre las sardinas y Santurtzi. Hasta pronto!</string>
+
+
 </resources>
