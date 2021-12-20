@@ -11,10 +11,14 @@
         android:theme="@style/Theme.Santurtzi">
 
         <activity
-            android:name=".A1"
+            android:name=".A5_Sotera"
             android:exported="true" />
         <activity
-            android:name=".FakeMapa"
+            android:name=".A1"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Mapa"
             android:exported="true" />
         <activity
             android:name=".G2_1"

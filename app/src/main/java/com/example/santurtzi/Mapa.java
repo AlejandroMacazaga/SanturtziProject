@@ -6,14 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class FakeMapa extends AppCompatActivity
+public class Mapa extends AppCompatActivity
 {
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fake_mapa);
+        setContentView(R.layout.activity_mapa);
 
 
 
@@ -22,13 +22,13 @@ public class FakeMapa extends AppCompatActivity
 
     public void irG1(View v)
     {
-        Intent intent=new Intent(FakeMapa.this, A1.class);
+        Intent intent=new Intent(Mapa.this, A1.class);
         startActivity(intent);
     }
 
     public void irG2(View v)
     {
-        Intent intent=new Intent(FakeMapa.this,G2_1.class);
+        Intent intent=new Intent(Mapa.this,G2_1.class);
         startActivity(intent);
     }
 
@@ -46,7 +46,7 @@ public class FakeMapa extends AppCompatActivity
 
     public void irG5(View v)
     {
-//        Intent intent=new Intent(FakeMapa.this,G1_1.class);
+//        Intent intent=new Intent(FakeMapa.this,A5_Sotera.class);
 //        startActivity(intent);
     }
 

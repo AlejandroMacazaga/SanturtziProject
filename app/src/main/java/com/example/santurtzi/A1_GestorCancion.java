@@ -14,10 +14,12 @@ public class A1_GestorCancion extends Properties
 
     private Context context;
     private Properties properties;
+    private A1_Cancion frg;
 
-    public A1_GestorCancion(Context context)
+    public A1_GestorCancion(Context context, A1_Cancion frg)
     {
         this.context = context;
+        this.frg=frg;
         //creates a new object ‘Properties’
         properties = new Properties();
         getProperties("cancion1.properties");
