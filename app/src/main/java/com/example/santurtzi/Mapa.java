@@ -28,7 +28,7 @@ public class Mapa extends AppCompatActivity
 
     public void irG2(View v)
     {
-        Intent intent=new Intent(Mapa.this,G2_1.class);
+        Intent intent=new Intent(Mapa.this, A2_1.class);
         startActivity(intent);
     }
 

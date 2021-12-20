@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 
-public class G2_1 extends AppCompatActivity {
+public class A2_1 extends AppCompatActivity {
 
     private Button btn;
     private ImageButton btnSardina1,btnSardina2,btnSardina3;

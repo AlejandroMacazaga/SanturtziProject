@@ -21,7 +21,7 @@
             android:name=".Mapa"
             android:exported="true" />
         <activity
-            android:name=".G2_1"
+            android:name=".A2_1"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
