@@ -270,6 +270,9 @@ public class A2_1 extends AppCompatActivity {
                     //win screen (un gif o algo)
                     contador = contador+1;
                 }
+                else if (contador==10){
+                    finish();
+                }
 
 
 
