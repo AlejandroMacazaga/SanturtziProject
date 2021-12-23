@@ -56,6 +56,9 @@ public class MainActivity extends AppCompatActivity{
         videoview.start(); //Or use resume() if it doesn't work. I'm not sure
     }
 
+    public void verGrupos(View v)
+    {
 
+    }
 
 }
