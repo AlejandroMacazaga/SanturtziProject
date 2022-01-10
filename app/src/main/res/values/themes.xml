@@ -16,5 +16,11 @@
     <style name="SplashScreen" parent="Theme.AppCompat.NoActionBar">
 
     </style>
+    <style name="Theme.Santurtzi.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Santurtzi.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Santurtzi.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

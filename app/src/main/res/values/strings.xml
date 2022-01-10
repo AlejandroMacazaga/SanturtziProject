@@ -2,11 +2,10 @@
     <string name="app_name">Santurtzi</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="hasi">HASI</string>
+    <string name="hasi">HASI JOLASTEN</string>
     <string name="comprobar">Comprobar</string>
     <string name="act1Aviso">*No se tendran en cuenta las mayúsculas, minúsculas o tildes*</string>
     <string name="A5_texto">¿Cómo va la aventura? ¿A que os suena el logo que veis en la pantalla? Bueno, para quien no lo sepa es el logo de Sotera y dentro de unos segundos podreis saber mas sobre ello. para informarnos haremos un concurso con vuestros compañeros en el que remareis en vuestras traineras virtuales a la meta. ¡Para remar con más rapidez tenéis que contestar a las siguientes preguntas rápido y bien. Buena suerte!</string>
-
 
 
     <string name="act2_1">¡Buenos días queridos pescadores! Hoy saldremos desde el puerto de Santurtzi a pescar sardinas. Sabéis lo que son?</string>
@@ -33,6 +32,16 @@
     <string name="act2_7_3">Puerto</string>
     <string name="act2_8">Pues hemos acabado la pesca. Espero que hayáis disfrutado de esta aventura. Ahora ya sabéis mucho más sobre las sardinas y Santurtzi. Hasta pronto!</string>
     <string name="volver">Volver</string>
-    <string name="taldeak">Taldeak</string>
+    <string name="taldeak">TALDEAK IKUSI</string>
+    <string name="title_activity_grupos">Grupos</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="talde_berri_bat_sortu">TALDE BERRI BAT SORTU</string>
 
 </resources>

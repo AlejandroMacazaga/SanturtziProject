@@ -9,14 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Santurtzi">
-
+        <activity
+            android:name=".Inicio.Grupos"
+            android:exported="true" />
         <activity
             android:name=".A5.A5_Sotera"
             android:exported="true" />
         <activity
             android:name=".A1.A1"
             android:exported="true"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Inicio.Mapa"
             android:exported="true" />
