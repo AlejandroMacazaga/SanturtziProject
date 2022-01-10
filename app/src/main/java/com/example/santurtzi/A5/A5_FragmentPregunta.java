@@ -1,9 +1,8 @@
-package com.example.santurtzi;
+package com.example.santurtzi.A5;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +11,8 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import com.example.santurtzi.R;
 
 public class A5_FragmentPregunta extends Fragment {
 

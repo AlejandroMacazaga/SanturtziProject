@@ -1,9 +1,8 @@
-package com.example.santurtzi;
+package com.example.santurtzi.A1;
 
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.util.Log;
-import android.view.inspector.PropertyReader;
 
 import java.io.IOException;
 import java.io.InputStream;

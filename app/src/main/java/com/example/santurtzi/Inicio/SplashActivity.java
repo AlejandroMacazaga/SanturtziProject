@@ -1,9 +1,11 @@
-package com.example.santurtzi;
+package com.example.santurtzi.Inicio;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.santurtzi.R;
 
 public class SplashActivity extends AppCompatActivity {
     @Override

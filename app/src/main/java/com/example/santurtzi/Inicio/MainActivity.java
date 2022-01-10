@@ -1,4 +1,4 @@
-package com.example.santurtzi;
+package com.example.santurtzi.Inicio;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.VideoView;
+
+import com.example.santurtzi.R;
 
 public class MainActivity extends AppCompatActivity{
 

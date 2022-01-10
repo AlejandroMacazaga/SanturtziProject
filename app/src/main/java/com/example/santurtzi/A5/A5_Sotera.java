@@ -1,8 +1,10 @@
-package com.example.santurtzi;
+package com.example.santurtzi.A5;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.santurtzi.R;
 
 public class A5_Sotera extends AppCompatActivity {
 

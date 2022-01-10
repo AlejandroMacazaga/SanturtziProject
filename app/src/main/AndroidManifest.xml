@@ -11,25 +11,25 @@
         android:theme="@style/Theme.Santurtzi">
 
         <activity
-            android:name=".A5_Sotera"
+            android:name=".A5.A5_Sotera"
             android:exported="true" />
         <activity
-            android:name=".A1"
+            android:name=".A1.A1"
             android:exported="true"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Mapa"
+            android:name=".Inicio.Mapa"
             android:exported="true" />
         <activity
-            android:name=".A2_1"
+            android:name=".A2.A2_1"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Inicio.MainActivity"
             android:exported="true">
             android:name=".MainActivity">
         </activity>
         <activity
-            android:name=".SplashActivity"
+            android:name=".Inicio.SplashActivity"
             android:exported="true"
             android:theme="@style/SplashScreen">
             <intent-filter>

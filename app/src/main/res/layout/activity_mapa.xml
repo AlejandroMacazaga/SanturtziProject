@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Mapa">
+    tools:context=".Inicio.Mapa">
 
     <!--NV || Aqui deberia el de ir el mapa pero de momento hasta que sepamos hacerlo vamos a poner esta-->
 

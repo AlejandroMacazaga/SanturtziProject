@@ -1,4 +1,4 @@
-package com.example.santurtzi;
+package com.example.santurtzi.A1;
 
 import android.view.KeyEvent;
 import android.view.View;

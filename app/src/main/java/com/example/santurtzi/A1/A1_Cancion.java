@@ -1,13 +1,11 @@
-package com.example.santurtzi;
+package com.example.santurtzi.A1;
 
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentContainerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,9 +16,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
+import com.example.santurtzi.R;
+
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Locale;
 
 public class A1_Cancion extends Fragment
 {

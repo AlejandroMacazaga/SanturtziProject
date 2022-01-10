@@ -1,4 +1,4 @@
-package com.example.santurtzi;
+package com.example.santurtzi.Grupo;
 
 public class Grupo
 {

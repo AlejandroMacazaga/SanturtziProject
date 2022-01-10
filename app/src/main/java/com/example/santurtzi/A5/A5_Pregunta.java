@@ -1,4 +1,4 @@
-package com.example.santurtzi;
+package com.example.santurtzi.A5;
 
 public class A5_Pregunta {
     private String pregunta;

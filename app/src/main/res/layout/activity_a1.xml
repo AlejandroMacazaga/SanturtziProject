@@ -5,11 +5,11 @@
     android:id="@+id/clPrincipal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".A1">
+    tools:context=".A1.A1">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/frgCancion"
-        class="com.example.santurtzi.A1_Cancion"
+        class="com.example.santurtzi.A1.A1_Cancion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"

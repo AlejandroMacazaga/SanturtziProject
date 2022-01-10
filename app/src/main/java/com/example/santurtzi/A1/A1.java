@@ -1,4 +1,4 @@
-package com.example.santurtzi;
+package com.example.santurtzi.A1;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -11,6 +11,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.santurtzi.Inicio.Mapa;
+import com.example.santurtzi.R;
 
 import java.io.IOException;
 

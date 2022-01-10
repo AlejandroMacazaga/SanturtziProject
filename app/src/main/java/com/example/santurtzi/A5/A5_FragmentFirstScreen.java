@@ -1,4 +1,4 @@
-package com.example.santurtzi;
+package com.example.santurtzi.A5;
 
 import android.os.Bundle;
 
@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.santurtzi.R;
 
 
 public class A5_FragmentFirstScreen extends Fragment {

@@ -1,4 +1,4 @@
-package com.example.santurtzi;
+package com.example.santurtzi.A2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
+import com.example.santurtzi.R;
 
 public class A2_1 extends AppCompatActivity {
 

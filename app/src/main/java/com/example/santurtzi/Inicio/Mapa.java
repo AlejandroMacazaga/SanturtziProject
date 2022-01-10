@@ -1,10 +1,14 @@
-package com.example.santurtzi;
+package com.example.santurtzi.Inicio;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.santurtzi.A1.A1;
+import com.example.santurtzi.A2.A2_1;
+import com.example.santurtzi.R;
 
 public class Mapa extends AppCompatActivity
 {

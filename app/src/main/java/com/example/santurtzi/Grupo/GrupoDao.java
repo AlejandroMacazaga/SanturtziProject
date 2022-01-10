@@ -1,4 +1,4 @@
-package com.example.santurtzi;
+package com.example.santurtzi.Grupo;
 
 import android.content.Context;
 import android.database.Cursor;
