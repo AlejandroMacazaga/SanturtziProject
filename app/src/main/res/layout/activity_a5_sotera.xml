@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".A5.A5_Sotera">
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.example.santurtzi.A5.A5_FragmentFirstScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
