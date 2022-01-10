@@ -13,6 +13,9 @@
             android:name=".Inicio.Grupos"
             android:exported="true" />
         <activity
+            android:name=".A4"
+            android:exported="true" />
+        <activity
             android:name=".A5.A5_Sotera"
             android:exported="true" />
         <activity
