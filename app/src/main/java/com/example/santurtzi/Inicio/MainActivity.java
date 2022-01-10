@@ -7,6 +7,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.VideoView;
 
 import com.example.santurtzi.R;
@@ -35,9 +36,6 @@ public class MainActivity extends AppCompatActivity{
                 mp.setLooping(true);
             }
         });
-
-
-
     }
 
     public void irMapa(View v)
@@ -60,7 +58,8 @@ public class MainActivity extends AppCompatActivity{
 
     public void verGrupos(View v)
     {
-
+        Intent intent = new Intent(MainActivity.this, Grupos.class);
+        startActivity(intent);
     }
 
 }

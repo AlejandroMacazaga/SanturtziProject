@@ -30,7 +30,7 @@ public class A2_1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_g21);
+        setContentView(R.layout.activity_a21);
         final MediaPlayer sonidoError = MediaPlayer.create(this, R.raw.error);
         final MediaPlayer sonidoAcierto = MediaPlayer.create(this, R.raw.acierto);
 

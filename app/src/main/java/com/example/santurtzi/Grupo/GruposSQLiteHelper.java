@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class GruposSQLiteHelper extends SQLiteOpenHelper
 {
-    private String sqlCreate="create table grupo( nomGrupo varchar2 Primary Key, integrantes integer, puntos integer )";
+    private String sqlCreate="create table Grupo( nomGrupo varchar2 Primary Key, integrantes integer, puntos integer )";
 
     public GruposSQLiteHelper(Context contexto, String nombre, SQLiteDatabase.CursorFactory factory, int version)
     {
@@ -22,7 +22,7 @@ public class GruposSQLiteHelper extends SQLiteOpenHelper
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1)
     {
-        db.execSQL("drop table if exists grupo");
+        db.execSQL("drop table if exists Grupo");
         db.execSQL(this.sqlCreate);
     }
 }
