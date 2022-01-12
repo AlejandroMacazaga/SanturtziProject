@@ -19,7 +19,7 @@ public class Grupos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grupos);
 
-        grupoDao=new GrupoDao(this.getBaseContext(),"Grupo",null,1);
-        grupos=grupoDao.verGrupos();
+//        grupoDao=new GrupoDao(this.getBaseContext(),"Grupo",null,1);
+//        grupos=grupoDao.verGrupos();
     }
 }
