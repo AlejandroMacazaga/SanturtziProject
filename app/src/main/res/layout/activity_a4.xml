@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:rotation="0"
     tools:context=".A4">
 
     <TextView
@@ -28,54 +29,346 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.92" />
 
-    <EditText
-        android:id="@+id/v1_1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="144dp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/v1_3"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="244dp" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/v3_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/h2"
+            app:layout_constraintEnd_toEndOf="@+id/h2"
+            app:layout_constraintHorizontal_bias="0.60"
+            app:layout_constraintStart_toEndOf="@+id/v2_1">
 
-    <EditText
-        android:id="@+id/v1_4"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="295dp" />
+            <EditText
+                android:id="@+id/v2_"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v3_" />
 
-    <EditText
-        android:id="@+id/v1_7"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="445dp" />
+            <EditText
+                android:id="@+id/v3_"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v3_11" />
 
-    <EditText
-        android:id="@+id/v1_6"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="395dp" />
+            <EditText
+                android:id="@+id/v3_11"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <EditText
-        android:id="@+id/v1_5"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="345dp" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/v2_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/h1_2"
+            app:layout_constraintEnd_toEndOf="@+id/h1_2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/v1">
 
-    <EditText
-        android:id="@+id/v1_2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="194dp" />
+            <EditText
+                android:id="@+id/h3_5"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/h1_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/v1"
+            app:layout_constraintStart_toEndOf="@+id/v1">
+
+            <EditText
+                android:id="@+id/h1_4"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/h1_"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/h1_5"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toEndOf="@+id/h1_4"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/v1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/v1_10"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <EditText
+                android:id="@+id/v1_9"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v1_" />
+
+            <EditText
+                android:id="@+id/v1_"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v1_11" />
+
+            <EditText
+                android:id="@+id/v1_11"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v1_8" />
+
+            <EditText
+                android:id="@+id/v1_8"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v1_12" />
+
+            <EditText
+                android:id="@+id/v1_12"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v1_10" />
+
+            <EditText
+                android:id="@+id/v1_13"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v1_9" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/h1_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/v1"
+            app:layout_constraintEnd_toStartOf="@+id/v1">
+
+            <EditText
+                android:id="@+id/h1_"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/v2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="1dp"
+            app:layout_constraintEnd_toEndOf="@+id/h1_2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/h1_2"
+            app:layout_constraintTop_toBottomOf="@+id/h1_2">
+
+            <EditText
+                android:id="@+id/h3_"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/h3_6"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/h3_" />
+
+            <EditText
+                android:id="@+id/h3_7"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/h3_6" />
+
+            <EditText
+                android:id="@+id/v3_4"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v3_13" />
+
+            <EditText
+                android:id="@+id/v3_13"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/h3_7" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/h2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/h1_2"
+            app:layout_constraintStart_toEndOf="@+id/v2_1">
+
+            <EditText
+                android:id="@+id/h2_10"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/h2_9"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toEndOf="@+id/h2_10"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/h2_11"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toEndOf="@+id/h2_9"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/h2_12"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toEndOf="@+id/h2_11"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/h2_"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toEndOf="@+id/h2_12"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/h2_8"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toEndOf="@+id/h2_"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/v3_2"
+            android:layout_width="wrap_content"
+            android:layout_height="101dp"
+            app:layout_constraintEnd_toEndOf="@+id/v3_1"
+            app:layout_constraintTop_toBottomOf="@+id/h2">
+
+            <EditText
+                android:id="@+id/v2_2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/v3_9"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v2_2" />
+
+            <EditText
+                android:id="@+id/v3_10"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v3_9" />
+
+            <EditText
+                android:id="@+id/v2_8"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v3_10" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/h3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/v3_1"
+            app:layout_constraintEnd_toStartOf="@+id/v3_1"
+            app:layout_constraintTop_toTopOf="@+id/v3_1">
+
+            <EditText
+                android:id="@+id/v3_12"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/h2_13"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toEndOf="@+id/v3_12"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/v2_9"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toEndOf="@+id/h2_13"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/v2_10"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toEndOf="@+id/v2_9"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

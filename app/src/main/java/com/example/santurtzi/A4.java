@@ -15,6 +15,7 @@ public class A4 extends AppCompatActivity {
 
     private Button btnHasi;
     private TextView txt1;
+    //private EditText
 
 
     @Override
