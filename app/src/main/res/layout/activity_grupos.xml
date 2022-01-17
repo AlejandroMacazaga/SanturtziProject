@@ -13,6 +13,7 @@
         android:text="@string/talde_berri_bat_sortu"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
+        android:onClick="crearGrupo"
         />
 
     <ListView

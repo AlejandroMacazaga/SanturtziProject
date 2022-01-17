@@ -34,7 +34,8 @@ public class GrupoDao
             }while(c.moveToNext());
         }
 
-        Grupo[] g= (Grupo[]) grupos.toArray();
+        Grupo[] g= new Grupo[grupos.size()];
+        g=grupos.toArray(g);
 
         return g;
 
@@ -43,7 +44,7 @@ public class GrupoDao
     public Grupo verGrupo(Grupo g)
     {
         Grupo grupo= null;
-        Cursor c=db.rawQuery("select nomGrupo, puntos, integrantges from Grupo where nomGrupo="+g.getNomGrupo(),null);
+        Cursor c=db.rawQuery("select nomGrupo, puntos, integrantges from Grupo where nomGrupo='"+g.getNomGrupo()+"'",null);
         c.moveToFirst();
         String nomGrupo=c.getString(0);
         int integrantes=c.getInt(1);
@@ -54,17 +55,17 @@ public class GrupoDao
 
     public void aniadirGrupo(Grupo grupo)
     {
-        db.execSQL("insert into Grupo (nomGrupo,integrantes,puntos) values("+grupo.getNomGrupo()+", "+grupo.getIntegrantes()+", "+grupo.getPuntos()+")");
+        db.execSQL("insert into Grupo (nomGrupo,integrantes,puntos) values('"+grupo.getNomGrupo()+"', "+grupo.getIntegrantes()+", "+grupo.getPuntos()+")");
     }
 
     public void eliminarGrupo(Grupo grupo)
     {
-        db.execSQL("delete grupo where nomGrupo="+grupo.getNomGrupo());
+        db.execSQL("delete grupo where nomGrupo='"+grupo.getNomGrupo()+"'");
     }
 
-    public void cambiarNombre(Grupo grupo)
-    {
-        db.execSQL("update Grupo set nomGrupo="+grupo.getNomGrupo()+")");
-    }
+//    public void cambiarNombre(Grupo grupo)
+//    {
+//        db.execSQL("update Grupo set nomGrupo='"+grupo.getNomGrupo()+"' where nomGrupo='"+grupo.getNomGrupo()+);
+//    }
 
 }
