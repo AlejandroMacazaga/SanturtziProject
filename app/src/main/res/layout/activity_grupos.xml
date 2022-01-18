@@ -19,8 +19,9 @@
     <ListView
         android:id="@+id/lvGrupos"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="650dp"
         android:layout_margin="15dp"
+        android:scrollbars="vertical"
         app:layout_constraintTop_toBottomOf="@id/btnGrupoN"
         app:layout_constraintLeft_toLeftOf="parent"
         />

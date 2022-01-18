@@ -16,12 +16,12 @@ public class GrupoDao
         db= new GruposSQLiteHelper(contexto, nombre,factory,version).getWritableDatabase();
     }
 
-    public Grupo[] verGrupos()
+    public ArrayList<Grupo> verGrupos()
     {
 
         ArrayList<Grupo> grupos= new ArrayList<Grupo>();
 
-        Cursor c=db.rawQuery("select nomGrupo, puntos, integrantes from Grupo", null);
+        Cursor c=db.rawQuery("select nomGrupo, puntos, integrantes from Grupo order by nomGrupo", null);
         if(c.moveToFirst())
         {
             do
@@ -34,28 +34,37 @@ public class GrupoDao
             }while(c.moveToNext());
         }
 
-        Grupo[] g= new Grupo[grupos.size()];
-        g=grupos.toArray(g);
+        //Grupo[] g= new Grupo[grupos.size()];
+        //g=grupos.toArray(g);
 
-        return g;
+        return grupos;
 
     }
 
     public Grupo verGrupo(Grupo g)
     {
         Grupo grupo= null;
-        Cursor c=db.rawQuery("select nomGrupo, puntos, integrantges from Grupo where nomGrupo='"+g.getNomGrupo()+"'",null);
-        c.moveToFirst();
-        String nomGrupo=c.getString(0);
-        int integrantes=c.getInt(1);
-        int puntos=c.getInt(2);
-        grupo= new Grupo(nomGrupo,integrantes,puntos);
+        Cursor c=db.rawQuery("select nomGrupo, puntos, integrantes from Grupo where nomGrupo='"+g.getNomGrupo()+"'",null);
+        if(c!=null && c.getCount()>0)
+        {
+            c.moveToFirst();
+            String nomGrupo=c.getString(0);
+            int integrantes=c.getInt(1);
+            int puntos=c.getInt(2);
+            grupo= new Grupo(nomGrupo,integrantes,puntos);
+        }
+
         return grupo;
     }
 
-    public void aniadirGrupo(Grupo grupo)
+    public boolean aniadirGrupo(Grupo grupo)
     {
-        db.execSQL("insert into Grupo (nomGrupo,integrantes,puntos) values('"+grupo.getNomGrupo()+"', "+grupo.getIntegrantes()+", "+grupo.getPuntos()+")");
+        if(verGrupo(grupo)==null)
+        {
+            db.execSQL("insert into Grupo (nomGrupo,integrantes,puntos) values('"+grupo.getNomGrupo()+"', "+grupo.getIntegrantes()+", "+grupo.getPuntos()+")");
+            return true;
+        }
+       return false;
     }
 
     public void eliminarGrupo(Grupo grupo)
