@@ -21,7 +21,7 @@ public class GrupoDao
 
         ArrayList<Grupo> grupos= new ArrayList<Grupo>();
 
-        Cursor c=db.rawQuery("select nomGrupo, puntos, integrantes from Grupo order by nomGrupo", null);
+        Cursor c=db.rawQuery("select nomGrupo, integrantes, puntos from Grupo order by nomGrupo", null);
         if(c.moveToFirst())
         {
             do
@@ -44,7 +44,7 @@ public class GrupoDao
     public Grupo verGrupo(Grupo g)
     {
         Grupo grupo= null;
-        Cursor c=db.rawQuery("select nomGrupo, puntos, integrantes from Grupo where nomGrupo='"+g.getNomGrupo()+"'",null);
+        Cursor c=db.rawQuery("select nomGrupo, integrantes, puntos from Grupo where nomGrupo='"+g.getNomGrupo()+"'",null);
         if(c!=null && c.getCount()>0)
         {
             c.moveToFirst();
@@ -69,7 +69,7 @@ public class GrupoDao
 
     public void eliminarGrupo(Grupo grupo)
     {
-        db.execSQL("delete grupo where nomGrupo='"+grupo.getNomGrupo()+"'");
+        db.execSQL("delete from Grupo where nomGrupo='"+grupo.getNomGrupo()+"'");
     }
 
 //    public void cambiarNombre(Grupo grupo)

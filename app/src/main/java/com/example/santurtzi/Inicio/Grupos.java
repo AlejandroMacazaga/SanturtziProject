@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -44,7 +45,7 @@ public class Grupos extends AppCompatActivity implements DialogoGrupos.OnDialogo
         lstGrupos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Grupo g= (Grupo) lstGrupos.getSelectedItem();
+                Grupo g= (Grupo) adapterView.getItemAtPosition(i);
                 grupoDao.eliminarGrupo(g);
                 grupos=grupoDao.verGrupos();
                 ag.refrescarLista(grupos);
@@ -79,5 +80,10 @@ public class Grupos extends AppCompatActivity implements DialogoGrupos.OnDialogo
     @Override
     public void onNegativeButtonClick() {
         Toast.makeText(this.getBaseContext(),"No has añadido ningun grupo", Toast.LENGTH_SHORT).show();
+    }
+
+    public void borrarGrupo(View v)
+    {
+        Log.i("x","Borrando grupo");
     }
 }

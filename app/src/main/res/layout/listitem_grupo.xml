@@ -38,4 +38,26 @@
         app:layout_constraintTop_toBottomOf="@id/lblNom"
         />
 
+    <ImageButton
+        android:id="@+id/btnBorrar"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:scaleType="fitStart"
+        android:layout_marginTop="10dp"
+        android:background="?colorOnSecondary"
+        android:src="@drawable/basura"
+        android:onClick="borrarGrupo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBorrar"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
