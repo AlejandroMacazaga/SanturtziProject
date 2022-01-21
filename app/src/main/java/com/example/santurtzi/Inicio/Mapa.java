@@ -9,7 +9,6 @@ import android.view.View;
 import com.example.santurtzi.A1.A1;
 import com.example.santurtzi.A2.A2_1;
 import com.example.santurtzi.A5.A5_Sotera;
-import com.example.santurtzi.A4;
 import com.example.santurtzi.R;
 
 public class Mapa extends AppCompatActivity
@@ -46,7 +45,7 @@ public class Mapa extends AppCompatActivity
 
     public void irG4(View v)
     {
-        Intent intent=new Intent(Mapa.this,A4.class);
+        Intent intent=new Intent(Mapa.this, TestMapa.class);
         startActivity(intent);
     }
 
