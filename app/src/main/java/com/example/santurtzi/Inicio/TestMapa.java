@@ -1,10 +1,20 @@
 package com.example.santurtzi.Inicio;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.santurtzi.R;
+import com.google.gson.JsonObject;
+import com.mapbox.api.geocoding.v5.models.CarmenFeature;
+import com.mapbox.geojson.Point;
 import com.mapbox.mapboxsdk.Mapbox;
+import com.mapbox.mapboxsdk.annotations.MarkerOptions;
+import com.mapbox.mapboxsdk.geometry.LatLng;
+import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
 import com.mapbox.maps.MapView;
+import com.mapbox.maps.Style;
+import com.mapbox.mapboxsdk.maps.MapboxMap;
+
 
 
 import android.os.Bundle;
@@ -12,6 +22,11 @@ import android.os.Bundle;
 public class TestMapa extends AppCompatActivity {
 
     private MapView mapView;
+    private CarmenFeature home;
+    private LatLng point;
+    public MapboxMap mapboxMap;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +35,11 @@ public class TestMapa extends AppCompatActivity {
         setContentView(R.layout.activity_test_mapa);
         mapView = (MapView) findViewById(R.id.mapView);
 
-        mapView.getMapAsync(new OnMapReadyCallback()){
 
-        }
 
     }
+
+
     @Override
     protected void onStart(){
         super.onStart();
