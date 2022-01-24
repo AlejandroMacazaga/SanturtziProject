@@ -31,6 +31,8 @@ public class A5_Sotera extends AppCompatActivity {
         loadFragment(currentFragment);
     }
 
+    
+
     private void loadFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.fragmentContainerView, fragment, null);
