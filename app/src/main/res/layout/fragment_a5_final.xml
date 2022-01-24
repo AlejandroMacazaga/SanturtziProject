@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondoFragments"
+    android:orientation="vertical"
+    android:padding="5dp">
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top
+"
+            android:src="@drawable/bg_escudo_sotera"
+            android:visibility="visible"></ImageView>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|top
+"
+            android:background="#A1FFFFFF"
+            android:fontFamily="monospace"
+            android:padding="5dp"
+            android:text="@string/A5_texto"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+    </FrameLayout>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Empezar" />
+</LinearLayout>

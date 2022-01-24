@@ -4,6 +4,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,7 +40,7 @@ public class A5_FragmentPregunta extends Fragment {
 
         v = getView();
 
-        p = new A5_Pregunta(getArguments().getString("pregunta"), getArguments().getInt("respuesta_correcta"), getArguments().getStringArray("opciones"));
+        p = new A5_Pregunta(getArguments().getString("pregunta"), getArguments().getInt("respuesta"), getArguments().getStringArray("opciones"));
         tvPregunta = (TextView) v.findViewById(R.id.textViewPregunta);
         btnResponder = (Button) v.findViewById(R.id.btnResponder);
         rbRespuesta1 = (RadioButton) v.findViewById(R.id.radioButton1);
@@ -47,7 +48,6 @@ public class A5_FragmentPregunta extends Fragment {
         rbRespuesta3 = (RadioButton) v.findViewById(R.id.radioButton3);
         rbRespuesta4 = (RadioButton) v.findViewById(R.id.radioButton4);
         rbGroup = (RadioGroup) v.findViewById(R.id.radioGroup);
-
         String[] opciones = p.getOpciones();
 
         tvPregunta.setText(p.getPregunta());
@@ -66,23 +66,27 @@ public class A5_FragmentPregunta extends Fragment {
                 // final MediaPlayer mp = MediaPlayer.create(this, R.raw.A5_error);
                 int selectedId = rbGroup.getCheckedRadioButtonId();
                 if(rbRespuesta1.getId() == selectedId) {
-                    if(p.checkIfCorrect(0)) {
-
+                    if(p.getRespuesta_correcta() == 1) {
+                        A5_Sotera activity = (A5_Sotera) getActivity();
+                        activity.loadNextQuestion();
                     }
                     else {
                         // mp.start();
                     }
                 }
                 if(rbRespuesta2.getId() == selectedId) {
-                    if(p.checkIfCorrect(1)) {
-
+                    if(p.getRespuesta_correcta() == 2) {
+                        A5_Sotera activity = (A5_Sotera) getActivity();
+                        activity.loadNextQuestion();
                     }
                     else {
                         // mp.start();
                     }
                 }
                 if(rbRespuesta3.getId() == selectedId) {
-                    if(p.checkIfCorrect(2)){
+                    if(p.getRespuesta_correcta() == 3){
+                        A5_Sotera activity = (A5_Sotera) getActivity();
+                        activity.loadNextQuestion();
 
                     }
                     else {
@@ -90,8 +94,9 @@ public class A5_FragmentPregunta extends Fragment {
                     }
                 }
                 if(rbRespuesta4.getId() == selectedId) {
-                    if(p.checkIfCorrect(3)){
-
+                    if(p.getRespuesta_correcta() == 14) {
+                        A5_Sotera activity = (A5_Sotera) getActivity();
+                        activity.loadNextQuestion();
                     }
                     else {
                         // mp.start();
