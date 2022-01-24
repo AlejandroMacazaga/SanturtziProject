@@ -15,10 +15,6 @@ public class A5_Pregunta {
         return opciones;
     }
 
-    public boolean checkIfCorrect(int respuesta) {
-        return (respuesta_correcta == respuesta);
-    }
-
     public String getPregunta() {
         return pregunta;
     }

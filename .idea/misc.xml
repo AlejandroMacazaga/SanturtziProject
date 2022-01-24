@@ -3,9 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="../../../../layout/custom_preview.xml" value="0.228125" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3388888888888889" />
-        <entry key="app/src/main/res/drawable/basura_background.xml" value="0.3128205128205128" />
         <entry key="app/src/main/res/drawable/g1fondo1_background.xml" value="0.2203125" />
         <entry key="app/src/main/res/drawable/g1fondo2_background.xml" value="0.3388888888888889" />
         <entry key="app/src/main/res/drawable/g1fondo3_background.xml" value="0.3388888888888889" />
@@ -15,24 +13,20 @@
         <entry key="app/src/main/res/drawable/rounded_edittext.xml" value="0.38125" />
         <entry key="app/src/main/res/drawable/rounded_edittext_bien.xml" value="0.38125" />
         <entry key="app/src/main/res/layout/activity_a1.xml" value="0.3651041666666667" />
-        <entry key="app/src/main/res/layout/activity_a4.xml" value="0.4083333333333333" />
         <entry key="app/src/main/res/layout/activity_a5_first_screen.xml" value="0.2866847826086957" />
         <entry key="app/src/main/res/layout/activity_a5_sotera.xml" value="0.1947463768115942" />
+        <entry key="app/src/main/res/layout/activity_a6_fuerte.xml" value="0.190625" />
         <entry key="app/src/main/res/layout/activity_g21.xml" value="0.75" />
-        <entry key="app/src/main/res/layout/activity_grupos.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_grupos.xml" value="0.3651041666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_test_mapa.xml" value="0.35104166666666664" />
-        <entry key="app/src/main/res/layout/dialogo_grupos.xml" value="0.27447916666666666" />
+        <entry key="app/src/main/res/layout/fragment_a5__pantalla_final.xml" value="0.20416666666666666" />
         <entry key="app/src/main/res/layout/fragment_a5_explanation_screen.xml" value="0.1947463768115942" />
+        <entry key="app/src/main/res/layout/fragment_a5_final.xml" value="0.190625" />
         <entry key="app/src/main/res/layout/fragment_a5_first_screen.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_a5_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_a5_pregunta.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_cancion1.xml" value="0.1947463768115942" />
-        <entry key="app/src/main/res/layout/listitem_grupo.xml" value="0.3651041666666667" />
         <entry key="app/src/main/res/layout/splash.xml" value="0.20416666666666666" />
-        <entry key="app/src/main/res/mipmap-anydpi-v26/basura.xml" value="0.29907407407407405" />
-        <entry key="app/src/main/res/mipmap-anydpi-v26/basura_round.xml" value="0.3128205128205128" />
-        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3128205128205128" />
       </map>
     </option>
   </component>
