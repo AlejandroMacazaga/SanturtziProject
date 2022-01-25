@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -42,11 +44,27 @@ public class Grupos extends AppCompatActivity implements DialogoGrupos.OnDialogo
 
     private void generarEventos()
     {
-        lstGrupos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        lstGrupos.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Grupo g= (Grupo) adapterView.getItemAtPosition(i);
-                grupoDao.eliminarGrupo(g);
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l)
+            {
+                Grupo g= (Grupo) lstGrupos.getItemAtPosition(i);
+                int h=ag.getH();
+                switch (h)
+                {
+                    case 1:
+                        Log.i("El niño ha seleccionado el grupo ",g.getNomGrupo());
+                        break;
+                    case 2:
+                        FragmentManager fragmentManager= getSupportFragmentManager();
+                        DialogoGrupos dg= new DialogoGrupos(g);
+                        dg.show(fragmentManager, "Dialogo para editar grupo");
+                        break;
+                    case 3:
+                        grupoDao.eliminarGrupo(g);
+                        break;
+                }
                 grupos=grupoDao.verGrupos();
                 ag.refrescarLista(grupos);
             }
@@ -82,8 +100,17 @@ public class Grupos extends AppCompatActivity implements DialogoGrupos.OnDialogo
         Toast.makeText(this.getBaseContext(),"No has añadido ningun grupo", Toast.LENGTH_SHORT).show();
     }
 
-    public void borrarGrupo(View v)
+    public void borrarGrupos(View v)
     {
-        Log.i("x","Borrando grupo");
+        ag.borrar();
+        Toast.makeText(this.getBaseContext(),"Ahora el grupo que selecciones se borrara", Toast.LENGTH_LONG).show();
     }
+
+    public void editarGrupo(View v)
+    {
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ag.editar();
+        Toast.makeText(this.getBaseContext(),"Ahora podras editar el grupo que selecciones", Toast.LENGTH_LONG).show();
+    }
+
 }

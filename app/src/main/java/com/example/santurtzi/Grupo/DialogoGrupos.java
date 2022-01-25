@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,6 +24,19 @@ public class DialogoGrupos extends DialogFragment
     private EditText txtNomGrupo;
     private EditText txtInteGrupo;
 
+    private TextView lblInfo;
+
+    private Grupo grupo;
+
+    public DialogoGrupos(Grupo g)
+    {
+        this.grupo=g;
+    }
+
+    public DialogoGrupos()
+    {
+        this.grupo=null;
+    }
 
     @NonNull
     @Override
@@ -53,6 +67,13 @@ public class DialogoGrupos extends DialogFragment
 
         txtNomGrupo=d.findViewById(R.id.txtNomGrupo);
         txtInteGrupo=d.findViewById(R.id.txtInteGrupo);
+        lblInfo=d.findViewById(R.id.lblInfoG);
+        if(this.grupo!=null)
+        {
+            txtNomGrupo.setHint(grupo.getNomGrupo());
+            txtInteGrupo.setHint(String.valueOf(grupo.getIntegrantes()));
+            lblInfo.setText("¡El grupo tiene "+this.grupo.getPuntos()+" puntos acumulados!");
+        }
         return builder.create();
     }
 
@@ -61,7 +82,15 @@ public class DialogoGrupos extends DialogFragment
         String s=txtInteGrupo.getText().toString();
         int inte=Integer.parseInt(s);
         String nom=txtNomGrupo.getText().toString();
-        Grupo g= new Grupo(txtNomGrupo.getText().toString(),inte,0);
+        Grupo g=null;
+        if(this.grupo!=null)
+        {
+            g= new Grupo(txtNomGrupo.getText().toString(),inte,this.grupo.getPuntos());
+        }
+        else
+        {
+            g= new Grupo(txtNomGrupo.getText().toString(),inte,0);
+        }
         return g;
     }
 
@@ -80,4 +109,13 @@ public class DialogoGrupos extends DialogFragment
         void onPossitiveButtonClick(Grupo g); //Eventos Botón Positivos
         void onNegativeButtonClick(); //Eventos Botón Negativo
     }
+
+    public Grupo getGrupo() {
+        return grupo;
+    }
+
+    public void setGrupo(Grupo grupo) {
+        this.grupo = grupo;
+    }
+
 }

@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,10 +20,12 @@ import java.util.List;
 public class AdaptadorGrupo extends ArrayAdapter<Grupo>
 {
     private ArrayList<Grupo> grupos;
+    private int h;
 
     public AdaptadorGrupo(@NonNull Context context, @NonNull ArrayList<Grupo> objects) {
         super(context, R.layout.listitem_grupo, objects);
         this.grupos=objects;
+        h=2;
     }
 
 //    public AdaptadorGrupo(@NonNull Context context, @NonNull Grupo[] objects) {
@@ -55,6 +58,26 @@ public class AdaptadorGrupo extends ArrayAdapter<Grupo>
         this.grupos.clear();
         this.grupos.addAll(grupos);
         this.notifyDataSetChanged();
+    }
+
+    public void editar()
+    {
+        this.h=2;
+    }
+
+    public void borrar()
+    {
+        this.h=3;
+    }
+
+    public void ver()
+    {
+        this.h=1;
+    }
+
+    public int getH()
+    {
+        return h;
     }
 
 }
