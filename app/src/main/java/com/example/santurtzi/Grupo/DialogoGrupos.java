@@ -70,7 +70,8 @@ public class DialogoGrupos extends DialogFragment
         lblInfo=d.findViewById(R.id.lblInfoG);
         if(this.grupo!=null)
         {
-            txtNomGrupo.setHint(grupo.getNomGrupo());
+            txtNomGrupo.setText(grupo.getNomGrupo());
+            txtNomGrupo.setEnabled(false);
             txtInteGrupo.setHint(String.valueOf(grupo.getIntegrantes()));
             lblInfo.setText("¡El grupo tiene "+this.grupo.getPuntos()+" puntos acumulados!");
         }
@@ -80,6 +81,8 @@ public class DialogoGrupos extends DialogFragment
     private Grupo recogerGrupo()
     {
         String s=txtInteGrupo.getText().toString();
+        if(s.length()<0)
+            s=txtInteGrupo.getHint().toString();
         int inte=Integer.parseInt(s);
         String nom=txtNomGrupo.getText().toString();
         Grupo g=null;

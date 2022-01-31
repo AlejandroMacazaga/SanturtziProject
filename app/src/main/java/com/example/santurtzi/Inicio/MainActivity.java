@@ -1,15 +1,19 @@
 package com.example.santurtzi.Inicio;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.VideoView;
 
+import com.example.santurtzi.Grupo.DialogoSeleccionGrupo;
+import com.example.santurtzi.Grupo.Grupo;
 import com.example.santurtzi.R;
 
 public class MainActivity extends AppCompatActivity{
@@ -40,6 +44,16 @@ public class MainActivity extends AppCompatActivity{
 
     public void irMapa(View v)
     {
+        DialogoSeleccionGrupo dgs= new DialogoSeleccionGrupo();
+        FragmentManager fragmentManager= getSupportFragmentManager();
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        Grupo g=null;
+        while(g==null)
+        {
+            dgs.show(fragmentManager,"tagAlerta");
+            g=dgs.getG();
+        }
+        //Log.i("grupoMain",g.getNomGrupo());
         Intent intent = new Intent(MainActivity.this, Mapa.class);
         startActivity(intent);
     }

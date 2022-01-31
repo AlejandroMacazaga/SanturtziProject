@@ -72,9 +72,9 @@ public class GrupoDao
         db.execSQL("delete from Grupo where nomGrupo='"+grupo.getNomGrupo()+"'");
     }
 
-//    public void cambiarNombre(Grupo grupo)
-//    {
-//        db.execSQL("update Grupo set nomGrupo='"+grupo.getNomGrupo()+"' where nomGrupo='"+grupo.getNomGrupo()+);
-//    }
+    public void editarGrupo(Grupo grupo)
+    {
+        db.execSQL("update Grupo set nomGrupo='"+grupo.getNomGrupo()+"', integrantes="+grupo.getIntegrantes()+" where nomGrupo='"+grupo.getNomGrupo()+"'");
+    }
 
 }

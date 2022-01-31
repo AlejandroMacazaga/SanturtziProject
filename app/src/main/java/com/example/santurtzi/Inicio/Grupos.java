@@ -26,6 +26,7 @@ public class Grupos extends AppCompatActivity implements DialogoGrupos.OnDialogo
     private GrupoDao grupoDao;
     private ArrayList<Grupo> grupos;
     private ListView lstGrupos;
+    private DialogoGrupos dg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -55,14 +56,17 @@ public class Grupos extends AppCompatActivity implements DialogoGrupos.OnDialogo
                 {
                     case 1:
                         Log.i("El niño ha seleccionado el grupo ",g.getNomGrupo());
+                        ag.ver();
                         break;
                     case 2:
                         FragmentManager fragmentManager= getSupportFragmentManager();
-                        DialogoGrupos dg= new DialogoGrupos(g);
+                        dg= new DialogoGrupos(g);
                         dg.show(fragmentManager, "Dialogo para editar grupo");
                         break;
                     case 3:
                         grupoDao.eliminarGrupo(g);
+                        Toast.makeText(Grupos.this.getBaseContext(), "Ahora solo podras ver los grupos", Toast.LENGTH_SHORT).show();
+                        ag.ver();
                         break;
                 }
                 grupos=grupoDao.verGrupos();
@@ -81,36 +85,50 @@ public class Grupos extends AppCompatActivity implements DialogoGrupos.OnDialogo
 
     @Override
     public void onPossitiveButtonClick(Grupo g) {
-        if(grupoDao.aniadirGrupo(g))
+        if(ag.getH()==1)
         {
-            //Podria gestionar esto en el dialogo quedaria mas txatxi
-            Toast.makeText(this.getBaseContext(),"Grupo "+g.getNomGrupo()+" añadido", Toast.LENGTH_SHORT).show();
-            grupos=grupoDao.verGrupos();
-            ag.refrescarLista(grupos);
+            if(grupoDao.aniadirGrupo(g))
+            {
+                //Podria gestionar esto en el dialogo quedaria mas txatxi
+                Toast.makeText(this.getBaseContext(),"Grupo "+g.getNomGrupo()+" añadido", Toast.LENGTH_SHORT).show();
+                grupos=grupoDao.verGrupos();
+                ag.refrescarLista(grupos);
+            }
+            else
+            {
+                Toast.makeText(this.getBaseContext(),"Grupo "+g.getNomGrupo()+" ya existe", Toast.LENGTH_SHORT).show();
+            }
         }
         else
         {
-            Toast.makeText(this.getBaseContext(),"Grupo "+g.getNomGrupo()+" ya existe", Toast.LENGTH_SHORT).show();
+            grupoDao.editarGrupo(g);
+            grupos=grupoDao.verGrupos();
+            ag.refrescarLista(grupos);
+            Toast.makeText(this.getBaseContext(),"Grupo "+g.getNomGrupo()+" editado", Toast.LENGTH_SHORT).show();
         }
-
+        ag.ver();
     }
 
     @Override
     public void onNegativeButtonClick() {
-        Toast.makeText(this.getBaseContext(),"No has añadido ningun grupo", Toast.LENGTH_SHORT).show();
+        if(ag.getH()==1)
+            Toast.makeText(this.getBaseContext(),"No has añadido ningun grupo", Toast.LENGTH_SHORT).show();
+        else
+            Toast.makeText(Grupos.this.getBaseContext(), "No has editado el grupo", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Grupos.this.getBaseContext(), "Ahora solo podras ver los grupos", Toast.LENGTH_SHORT).show();
     }
 
     public void borrarGrupos(View v)
     {
         ag.borrar();
-        Toast.makeText(this.getBaseContext(),"Ahora el grupo que selecciones se borrara", Toast.LENGTH_LONG).show();
+        Toast.makeText(this.getBaseContext(),"Ahora el grupo que selecciones se borrara", Toast.LENGTH_SHORT).show();
     }
 
     public void editarGrupo(View v)
     {
         /////////////////////////////////////////////////////////////////////////////////////////////////////////
         ag.editar();
-        Toast.makeText(this.getBaseContext(),"Ahora podras editar el grupo que selecciones", Toast.LENGTH_LONG).show();
+        Toast.makeText(this.getBaseContext(),"Ahora podras editar el grupo que selecciones", Toast.LENGTH_SHORT).show();
     }
 
 }

@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,7 +26,7 @@ public class AdaptadorGrupo extends ArrayAdapter<Grupo>
     public AdaptadorGrupo(@NonNull Context context, @NonNull ArrayList<Grupo> objects) {
         super(context, R.layout.listitem_grupo, objects);
         this.grupos=objects;
-        h=2;
+        h=1;
     }
 
 //    public AdaptadorGrupo(@NonNull Context context, @NonNull Grupo[] objects) {
