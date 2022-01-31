@@ -16,6 +16,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
+import com.example.santurtzi.Grupo.Grupo;
+import com.example.santurtzi.Grupo.GrupoDao;
 import com.example.santurtzi.R;
 
 import java.util.HashMap;
@@ -206,7 +208,7 @@ public class A1_Cancion extends Fragment
             String respAlum=edt.getText().toString().toLowerCase();
             if(respAlum!=null) {
                 if (respAlum.length() > 0) {
-                    if (!respAlum.equals(respBien.toLowerCase())) {
+                    if (!respAlum.trim().equals(respBien.toLowerCase())) {
                         edt.setBackground(v.getResources().getDrawable(R.drawable.rounded_edittext_mal));
                     } else {
                         edt.setBackground(v.getResources().getDrawable(R.drawable.rounded_edittext_bien));
@@ -281,7 +283,7 @@ public class A1_Cancion extends Fragment
                 }
                 break;
             default:
-                //salir de la aplicacion con zorionak
+                //////////////////////////////////////////////
                 break;
         }
     }

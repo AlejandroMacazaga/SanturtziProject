@@ -77,4 +77,9 @@ public class GrupoDao
         db.execSQL("update Grupo set nomGrupo='"+grupo.getNomGrupo()+"', integrantes="+grupo.getIntegrantes()+" where nomGrupo='"+grupo.getNomGrupo()+"'");
     }
 
+    public void subirPuntos(Grupo g, int puntos)
+    {
+        db.execSQL("update Grupo set puntos=puntos+"+puntos+" where nomGrupo='"+g.getNomGrupo()+"'");
+    }
+
 }

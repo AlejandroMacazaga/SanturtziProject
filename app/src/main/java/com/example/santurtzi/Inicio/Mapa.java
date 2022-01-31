@@ -29,42 +29,49 @@ public class Mapa extends AppCompatActivity
     public void irG1(View v)
     {
         Intent intent=new Intent(Mapa.this, A1.class);
+        intent.putExtra("grupo",this.g);
         startActivity(intent);
     }
 
     public void irG2(View v)
     {
         Intent intent=new Intent(Mapa.this, A2_1.class);
+        intent.putExtra("grupo",this.g);
         startActivity(intent);
     }
 
     public void irG3(View v)
     {
 //        Intent intent=new Intent(FakeMapa.this,G1_1.class);
+//        intent.putExtra("grupo",this.g);
 //        startActivity(intent);
     }
 
     public void irG4(View v)
     {
         Intent intent=new Intent(Mapa.this, TestMapa.class);
+        intent.putExtra("grupo",this.g);
         startActivity(intent);
     }
 
     public void irG5(View v)
     {
         Intent intent=new Intent(Mapa.this, A5_Sotera.class);
+        intent.putExtra("grupo",this.g);
         startActivity(intent);
     }
 
     public void irG6(View v)
     {
 //        Intent intent=new Intent(FakeMapa.this,G1_1.class);
+//        intent.putExtra("grupo",this.g);
 //        startActivity(intent);
     }
 
     public void irG7(View v)
     {
 //        Intent intent=new Intent(FakeMapa.this,G1_1.class);
+//        intent.putExtra("grupo",this.g);
 //        startActivity(intent);
     }
 

@@ -12,6 +12,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.santurtzi.Grupo.Grupo;
+import com.example.santurtzi.Grupo.GrupoDao;
+import com.example.santurtzi.Inicio.Grupos;
 import com.example.santurtzi.Inicio.Mapa;
 import com.example.santurtzi.R;
 
@@ -42,6 +45,8 @@ public class A1 extends AppCompatActivity
 
     private String[] palabras1;
 
+    private Grupo g;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -59,6 +64,8 @@ public class A1 extends AppCompatActivity
         frgCancion = findViewById(R.id.frgCancion);
         txtAviso =findViewById(R.id.txtAviso);
         btnSalir=findViewById(R.id.btnSalir);
+
+        g= (Grupo) getIntent().getSerializableExtra("grupo");
     }
 
     private void cargarRecursos()
@@ -134,11 +141,13 @@ public class A1 extends AppCompatActivity
 
     public void salir(View v)
     {
+        GrupoDao gd=new GrupoDao(this.getBaseContext(),"Grupo",null,1);
+        gd.subirPuntos(this.g,20);
         Intent intent = new Intent(A1.this, Mapa.class);
         startActivity(intent);
     }
 
-    private void generarAyuda()
+    private void generarAyuda()/////////////////////////////////////////////////////////////////////////////////////////////////////////
     {
         switch (nivel)
         {
@@ -146,4 +155,11 @@ public class A1 extends AppCompatActivity
         }
     }
 
+    public Grupo getG() {
+        return g;
+    }
+
+    public void setG(Grupo g) {
+        this.g = g;
+    }
 }
