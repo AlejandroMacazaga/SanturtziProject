@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity{
     private VideoView videoview;
     private Uri uri;
     private int stopPosition;
+    private  Grupo g;
 
 
     @Override
@@ -44,19 +45,19 @@ public class MainActivity extends AppCompatActivity{
 
     public void irMapa(View v)
     {
-        DialogoSeleccionGrupo dgs= new DialogoSeleccionGrupo();
+        DialogoSeleccionGrupo dgs= new DialogoSeleccionGrupo(this);
         FragmentManager fragmentManager= getSupportFragmentManager();
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        Grupo g=null;
-        while(g==null)
-        {
-            dgs.show(fragmentManager,"tagAlerta");
-            g=dgs.getG();
-        }
-        //Log.i("grupoMain",g.getNomGrupo());
+        dgs.show(fragmentManager,"tagAlerta");
+    }
+
+    public void abrirMapa(Grupo g)
+    {
         Intent intent = new Intent(MainActivity.this, Mapa.class);
+        this.g=g;
+        intent.putExtra("grupo",g);
         startActivity(intent);
     }
+
     @Override
     public void onPause() {
         super.onPause();
@@ -76,4 +77,8 @@ public class MainActivity extends AppCompatActivity{
         startActivity(intent);
     }
 
+    public Grupo getG()
+    {
+        return g;
+    }
 }

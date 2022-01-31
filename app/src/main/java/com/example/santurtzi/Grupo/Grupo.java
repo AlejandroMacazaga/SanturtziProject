@@ -1,6 +1,8 @@
 package com.example.santurtzi.Grupo;
 
-public class Grupo
+import java.io.Serializable;
+
+public class Grupo implements Serializable
 {
 
     private String nomGrupo;

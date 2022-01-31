@@ -11,12 +11,20 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
+import com.example.santurtzi.Inicio.MainActivity;
+
 import java.util.ArrayList;
 
 public class DialogoSeleccionGrupo extends DialogFragment
 {
 
     private Grupo g;
+    private MainActivity parent;
+
+    public DialogoSeleccionGrupo(MainActivity parent)
+    {
+        this.parent=parent;
+    }
 
     @NonNull
     @Override
@@ -30,7 +38,7 @@ public class DialogoSeleccionGrupo extends DialogFragment
         builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
+                dismiss();
             }
         });
 
@@ -39,13 +47,13 @@ public class DialogoSeleccionGrupo extends DialogFragment
             public void onClick(DialogInterface dialog, int which) {
                 Grupo grupo= ag.getItem(which);
                 AlertDialog.Builder builderInner = new AlertDialog.Builder(getActivity());
-                builderInner.setMessage(g.getNomGrupo());
+                builderInner.setMessage(grupo.getNomGrupo());
                 builderInner.setTitle("Sereis el grupo: ");
                 builderInner.setPositiveButton("Hasi!", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog,int which) {
                         g=grupo;
-                        dialog.dismiss();
+                        dismiss();
                     }
                 });
                 builderInner.show();
@@ -53,6 +61,14 @@ public class DialogoSeleccionGrupo extends DialogFragment
         });
 
         return builder.create();
+    }
+
+    @Override
+    public void dismiss()
+    {
+        Log.i("Meh","meeeehhh");
+        parent.abrirMapa(this.g);
+        super.dismiss();
     }
 
     public Grupo getG() {

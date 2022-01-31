@@ -9,10 +9,13 @@ import android.view.View;
 import com.example.santurtzi.A1.A1;
 import com.example.santurtzi.A2.A2_1;
 import com.example.santurtzi.A5.A5_Sotera;
+import com.example.santurtzi.Grupo.Grupo;
 import com.example.santurtzi.R;
 
 public class Mapa extends AppCompatActivity
 {
+
+    private Grupo g;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -20,9 +23,7 @@ public class Mapa extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mapa);
 
-
-
-
+        this.g= (Grupo) getIntent().getSerializableExtra("grupo");
     }
 
     public void irG1(View v)
