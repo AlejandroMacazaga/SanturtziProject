@@ -3,28 +3,26 @@ package com.example.santurtzi.Inicio;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.santurtzi.R;
-import com.google.gson.JsonObject;
-import com.mapbox.api.geocoding.v5.models.CarmenFeature;
-import com.mapbox.geojson.Point;
 import com.mapbox.mapboxsdk.Mapbox;
-import com.mapbox.mapboxsdk.annotations.MarkerOptions;
-import com.mapbox.mapboxsdk.geometry.LatLng;
+import com.mapbox.mapboxsdk.*;
 import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
 import com.mapbox.maps.MapView;
 import com.mapbox.maps.Style;
-import com.mapbox.mapboxsdk.maps.MapboxMap;
+import com.mapbox.*;
+import com.mapbox.mapboxsdk.style.sources.GeoJsonSource;
 
 
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
 
 public class TestMapa extends AppCompatActivity {
 
     private MapView mapView;
-    private CarmenFeature home;
-    private LatLng point;
-    public MapboxMap mapboxMap;
+    private MapboxMap mapboxMap;
+    //public MapboxMap mapboxMap;
 
 
 
@@ -34,10 +32,13 @@ public class TestMapa extends AppCompatActivity {
         Mapbox.getInstance(this,getString(R.string.mapbox_access_token));
         setContentView(R.layout.activity_test_mapa);
         mapView = (MapView) findViewById(R.id.mapView);
+        //mapView.getMapAsync(this);
 
-
-
+        //xd
+        
+        
     }
+
 
 
     @Override
