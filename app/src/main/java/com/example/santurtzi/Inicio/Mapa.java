@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.example.santurtzi.A1.A1;
 import com.example.santurtzi.A2.A2_1;
+import com.example.santurtzi.A3.A3;
 import com.example.santurtzi.A5.A5_Sotera;
 import com.example.santurtzi.Grupo.Grupo;
 import com.example.santurtzi.R;
@@ -42,9 +43,9 @@ public class Mapa extends AppCompatActivity
 
     public void irG3(View v)
     {
-//        Intent intent=new Intent(FakeMapa.this,G1_1.class);
-//        intent.putExtra("grupo",this.g);
-//        startActivity(intent);
+        Intent intent=new Intent(Mapa.this, A3.class);
+        intent.putExtra("grupo",this.g);
+        startActivity(intent);
     }
 
     public void irG4(View v)

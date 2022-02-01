@@ -50,5 +50,6 @@
     <string name="nombre_del_grupo">Nombre del grupo:</string>
     <string name="n_mero_de_intengrantes">Número de intengrantes:</string>
     <string name="infoGrupo">***El grupo se creara con 0 puntos, jugad para conseguir más y ser los primeros!***</string>
+    <string name="infoNombre">***Cuidado con el nombre que elijas, no podras cambiarlo más adelante***</string>
 
 </resources>

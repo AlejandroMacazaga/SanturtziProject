@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Santurtzi">
         <activity
+            android:name=".A3.A3"
+            android:exported="false" />
+        <activity
             android:name=".A6.A6_Fuerte"
             android:exported="true" />
         <activity

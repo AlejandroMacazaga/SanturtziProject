@@ -128,7 +128,7 @@ public class Grupos extends AppCompatActivity implements DialogoGrupos.OnDialogo
     {
         /////////////////////////////////////////////////////////////////////////////////////////////////////////
         ag.editar();
-        Toast.makeText(this.getBaseContext(),"Ahora podras editar el grupo que selecciones", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this.getBaseContext(),"Ahora podras editar el numero de integrantes del grupo que selecciones", Toast.LENGTH_SHORT).show();
     }
 
 }

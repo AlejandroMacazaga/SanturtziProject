@@ -31,6 +31,7 @@ public class DialogoSeleccionGrupo extends DialogFragment
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState)
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle("Elige tu grupo");
         GrupoDao gd= new GrupoDao(getContext(),"Grupo",null,1);
         ArrayList<Grupo> grupos=gd.verGrupos();
         AdaptadorGrupo ag= new AdaptadorGrupo(getContext(),grupos);
@@ -38,7 +39,7 @@ public class DialogoSeleccionGrupo extends DialogFragment
         builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                dismiss();
+                Toast.makeText(parent, "Tienes que elegir un grupo para empezar a jugar", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -47,7 +48,7 @@ public class DialogoSeleccionGrupo extends DialogFragment
             public void onClick(DialogInterface dialog, int which) {
                 Grupo grupo= ag.getItem(which);
                 AlertDialog.Builder builderInner = new AlertDialog.Builder(getActivity());
-                builderInner.setMessage(grupo.getNomGrupo());
+                builderInner.setMessage(grupo.toString());
                 builderInner.setTitle("Sereis el grupo: ");
                 builderInner.setPositiveButton("Hasi!", new DialogInterface.OnClickListener() {
                     @Override

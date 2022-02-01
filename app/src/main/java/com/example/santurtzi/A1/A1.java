@@ -46,6 +46,8 @@ public class A1 extends AppCompatActivity
     private String[] palabras1;
 
     private Grupo g;
+    private int puntos;
+    private boolean terminado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -66,6 +68,7 @@ public class A1 extends AppCompatActivity
         btnSalir=findViewById(R.id.btnSalir);
 
         g= (Grupo) getIntent().getSerializableExtra("grupo");
+        terminado=false;
     }
 
     private void cargarRecursos()
@@ -107,11 +110,13 @@ public class A1 extends AppCompatActivity
                 gifRespuestas.setImageDrawable(gifMal);
                 music=MediaPlayer.create(A1.this,R.raw.a1_ningun_acierto);
                 music.start();
+                puntos-=20;
                 break;
             case 0:
                 gifRespuestas.setImageDrawable(gifAlgun);
                 music=MediaPlayer.create(A1.this,R.raw.a1_algun_fallo);
                 music.start();
+                puntos-=10;
                 break;
             case 1:
                 gifRespuestas.setImageDrawable(gifsAciertos[nivel]);
@@ -122,6 +127,7 @@ public class A1 extends AppCompatActivity
                     music=MediaPlayer.create(A1.this,R.raw.a1_correcto1);
                     music.start();
                     //cambiar de fragment
+                    puntos+=40;
                 }
                 else
                 {
@@ -141,8 +147,13 @@ public class A1 extends AppCompatActivity
 
     public void salir(View v)
     {
-        GrupoDao gd=new GrupoDao(this.getBaseContext(),"Grupo",null,1);
-        gd.subirPuntos(this.g,20);
+        if(!terminado)
+        {
+            GrupoDao gd=new GrupoDao(this.getBaseContext(),"Grupo",null,1);
+            puntos+=50;
+            gd.subirPuntos(this.g,puntos);
+            terminado=true;
+        }
         Intent intent = new Intent(A1.this, Mapa.class);
         startActivity(intent);
     }

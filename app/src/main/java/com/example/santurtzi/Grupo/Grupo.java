@@ -46,4 +46,9 @@ public class Grupo implements Serializable
         this.puntos = puntos;
     }
 
+    public String toString()
+    {
+        return this.nomGrupo+" de "+this.integrantes+" integrantes que han acumulado "+this.getPuntos()+" puntos";
+    }
+
 }

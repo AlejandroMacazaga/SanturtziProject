@@ -21,7 +21,7 @@ public class GrupoDao
 
         ArrayList<Grupo> grupos= new ArrayList<Grupo>();
 
-        Cursor c=db.rawQuery("select nomGrupo, integrantes, puntos from Grupo order by puntos, nomGrupo", null);
+        Cursor c=db.rawQuery("select nomGrupo, integrantes, puntos from Grupo order by puntos desc", null);
         if(c.moveToFirst())
         {
             do
