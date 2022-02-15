@@ -51,5 +51,16 @@
     <string name="n_mero_de_intengrantes">Número de intengrantes:</string>
     <string name="infoGrupo">***El grupo se creara con 0 puntos, jugad para conseguir más y ser los primeros!***</string>
     <string name="infoNombre">***Cuidado con el nombre que elijas, no podras cambiarlo más adelante***</string>
+    <string name="infoA3">¿Te gusta dibujar? En la siguiente pantalla podras hacerlo! Puedes dibujar lo que quieras el limite es tu imaginacón. Podrias dibujar algo de Santurce, como las sardinas o a Mentxu la gaviota.</string>
+
+    <string name="start_new">New</string>
+    <string name="brush">Brush</string>
+    <string name="erase">Erase</string>
+    <string name="save">Save</string>
+    <string name="paint">Paint</string>
+
+    <string name="sml">Small</string>
+    <string name="med">Medium</string>
+    <string name="lrg">Large</string>
 
 </resources>
