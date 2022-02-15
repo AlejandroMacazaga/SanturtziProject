@@ -12,6 +12,7 @@ dependencyResolutionManagement {
                 username = "mapbox"
                 password = MAPBOX_DOWNLOADS_TOKEN
             }
+
         }
     }
 }

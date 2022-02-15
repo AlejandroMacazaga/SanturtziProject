@@ -7,8 +7,5 @@
     android:layout_height="match_parent"
     tools:context=".A3.A3">
 
-    <com.mukesh.DrawingView>
-
-    </com.mukesh.DrawingView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
