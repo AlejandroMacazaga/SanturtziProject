@@ -15,4 +15,5 @@
     <color name="verdeAcert">#8A00D80B</color>
     <color name="blancoTranspa">#7EF8EDED</color>
     <color name="negroTranspa">#6A000000</color>
+    <color name="b">#00FFFFFF</color>
 </resources>

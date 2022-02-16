@@ -62,5 +62,8 @@
     <string name="sml">Small</string>
     <string name="med">Medium</string>
     <string name="lrg">Large</string>
+    <string name="infoA6">¡Hola chicos y chicas! En este juego deberás encontrar un fuerte del Serantes de los tres escondidos en el tablero. Para ello, tendrás que ir seleccionando la casilla en la que crees que está escondido (por ejemplo: J4), pero ¡CUIDADO! El fuerte ocupa cuatro casillas. Al encontrar un fuerte al completo, se te hará una pregunta sobre este. Si respondes correctamente, ¡Enhorabuena! Habrás ganado el juego. Si te equivocas en la respuesta, ¡no te preocupes! tendrás DOS oportunidades más. Mucha suerte!</string>
+    <string name="a_jugar">¡A jugar!</string>
+    <string name="bilatu">Bilatu ezazu Seranteseko iturria!</string>
 
 </resources>

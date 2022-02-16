@@ -1,6 +1,7 @@
 package com.example.santurtzi.A2;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -18,7 +19,7 @@ import com.example.santurtzi.R;
 
 public class A2_1 extends AppCompatActivity {
 
-    private Button btn;
+    private ConstraintLayout btn;
     private ImageButton btnSardina1,btnSardina2,btnSardina3;
     private ImageView imgPescador,imgBocadillo,imgSardinas;
     private Boolean visible;
@@ -37,7 +38,7 @@ public class A2_1 extends AppCompatActivity {
         imgPescador = (ImageView)findViewById(R.id.imgPescador);
         imgBocadillo = (ImageView)findViewById(R.id.imgBocadillo);
         imgSardinas = (ImageView)findViewById(R.id.imgSardinas);
-        btn = (Button)findViewById(R.id.btn);
+        btn = (ConstraintLayout)findViewById(R.id.clPeces);
         txt = (TextView)findViewById(R.id.txt);
         txtContadorSardinas = (TextView)findViewById(R.id.txtContadorSardinas);
         btnSardina1 = (ImageButton)findViewById(R.id.btnSardina1);

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".A6.A6Juego">
+
+    <TextView
+        android:id="@+id/txtInfoSerantes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bilatu"
+        android:textSize="17dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="15dp"/>
+
+    <HorizontalScrollView
+        app:layout_constraintTop_toBottomOf="@id/txtInfoSerantes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <GridLayout
+            android:id="@+id/gdBotones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/txtInfoSerantes"
+            android:columnCount="6"
+            android:rowCount="6"
+            android:padding="15dp"
+            android:layout_gravity="center">
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="3dp"
+                />
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:text="1"
+                android:layout_marginLeft="3dp"
+                />
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="3dp"
+                android:text="2"
+                />
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="3dp"
+                android:text="3"
+                />
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="3dp"
+                android:text="4"
+                />
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="3dp"
+                android:text="5"
+                />
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="3dp"
+                android:text="1" />
+
+            <ImageButton
+                android:layout_width="65dp"
+                android:layout_height="60dp" />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:text="2"
+                android:layout_marginTop="3dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:text="3"
+                android:layout_marginTop="3dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:text="4"
+                android:layout_marginTop="3dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:text="5"
+                android:layout_marginTop="3dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+        </GridLayout>
+
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
